@@ -40,16 +40,10 @@
   flex-wrap: wrap;
   gap: 1rem;
 }
-.availability {
-  margin: 1.75rem 0 0;
-  color: var(--muted);
-  font-size: 0.9375rem;
-  line-height: 1.8;
-}
 .portrait {
   width: 320px;
   height: auto;
-  aspect-ratio: 961 / 1280;
+  aspect-ratio: 720 / 959;
   border-radius: 8px;
 }
 @media (max-width: 850px) {

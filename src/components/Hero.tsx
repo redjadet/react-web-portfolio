@@ -19,18 +19,13 @@ export function Hero() {
               Get in touch
             </a>
           </div>
-          <p className={styles.availability}>
-            Istanbul, Türkiye · Available immediately
-            <br />
-            Remote from Türkiye · Full-time &amp; contract
-          </p>
         </div>
         <img
           className={styles.portrait}
           src={import.meta.env.BASE_URL + 'ilker-sevim.jpg'}
           alt="Portrait of İlker Sevim"
-          width="961"
-          height="1280"
+          width="720"
+          height="959"
           fetchPriority="high"
           decoding="async"
         />
