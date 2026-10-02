@@ -21,17 +21,19 @@ export function Contact() {
               className="btn btn--ghost"
               href={profile.links.github}
               target="_blank"
-              rel="noreferrer"
+              rel="noopener noreferrer"
             >
               GitHub
+              <span className="visually-hidden"> (opens in a new tab)</span>
             </a>
             <a
               className="btn btn--ghost"
               href={profile.links.linkedin}
               target="_blank"
-              rel="noreferrer"
+              rel="noopener noreferrer"
             >
               LinkedIn
+              <span className="visually-hidden"> (opens in a new tab)</span>
             </a>
           </div>
         </div>

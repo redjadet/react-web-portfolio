@@ -17,6 +17,7 @@
   font-size: clamp(3rem, 9vw, 5.6rem);
   line-height: 0.92;
   letter-spacing: -0.05em;
+  overflow-wrap: anywhere;
 }
 
 .role {

@@ -11,7 +11,7 @@ export function About() {
         </h2>
         <div className={styles.panel}>
           <p>
-            I am {profile.name}, based in {profile.location.split('·')[0].trim()}. My day-to-day is
+            I am {profile.name}, based in {profile.locationShort}. My day-to-day is
             iOS and Flutter product work — architecture, offline resilience, native interop, and
             shipping with tests and CI.
           </p>

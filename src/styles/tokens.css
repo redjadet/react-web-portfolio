@@ -42,6 +42,7 @@ html {
 body {
   margin: 0;
   min-width: 320px;
+  overflow-x: clip;
   font-family: var(--font-body);
   color: var(--ink);
   background:
@@ -100,6 +101,18 @@ a {
   top: 1rem;
 }
 
+.visually-hidden {
+  position: absolute;
+  width: 1px;
+  height: 1px;
+  padding: 0;
+  margin: -1px;
+  overflow: hidden;
+  clip: rect(0, 0, 0, 0);
+  white-space: nowrap;
+  border: 0;
+}
+
 .shell {
   width: min(100% - 2rem, var(--max));
   margin-inline: auto;
@@ -107,6 +120,12 @@ a {
 
 .section {
   padding: clamp(3.5rem, 8vw, 6rem) 0;
+  scroll-margin-top: 5.5rem;
+}
+
+#top,
+#main {
+  scroll-margin-top: 5.5rem;
 }
 
 .section__eyebrow {

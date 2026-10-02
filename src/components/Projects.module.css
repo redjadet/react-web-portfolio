@@ -9,6 +9,7 @@
   box-shadow: var(--shadow);
   text-decoration: none;
   transition: transform 160ms ease, border-color 160ms ease;
+  min-width: 0;
 }
 
 .featured:hover {
@@ -30,12 +31,15 @@
   font-family: var(--font-display);
   font-size: clamp(1.5rem, 3vw, 2rem);
   letter-spacing: -0.03em;
+  overflow-wrap: anywhere;
+  word-break: break-word;
 }
 
 .blurb {
   margin: 0 0 1rem;
   color: var(--ink-soft);
   max-width: 46rem;
+  overflow-wrap: anywhere;
 }
 
 .tags {
@@ -55,11 +59,13 @@
   font-size: 0.82rem;
   font-weight: 600;
   color: var(--ink-soft);
+  max-width: 100%;
+  overflow-wrap: anywhere;
 }
 
 .grid {
   display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(16rem, 1fr));
+  grid-template-columns: repeat(auto-fit, minmax(min(100%, 16rem), 1fr));
   gap: 1rem;
 }
 
@@ -73,6 +79,7 @@
   background: color-mix(in srgb, white 62%, transparent);
   text-decoration: none;
   min-height: 100%;
+  min-width: 0;
   transition: transform 160ms ease, border-color 160ms ease;
 }
 
@@ -86,12 +93,15 @@
   font-family: var(--font-display);
   font-size: 1.2rem;
   letter-spacing: -0.02em;
+  overflow-wrap: anywhere;
+  word-break: break-word;
 }
 
 .cardBlurb {
   margin: 0;
   color: var(--ink-soft);
   font-size: 0.95rem;
+  overflow-wrap: anywhere;
 }
 
 .cta {
@@ -99,4 +109,13 @@
   font-size: 0.88rem;
   font-weight: 700;
   color: var(--accent-ink);
+}
+
+.empty {
+  margin: 0;
+  padding: 1.25rem;
+  border: 1px dashed var(--line);
+  border-radius: var(--radius);
+  color: var(--ink-soft);
+  background: color-mix(in srgb, white 55%, transparent);
 }

@@ -5,6 +5,7 @@ export const profile = {
   summary:
     'I design and ship production iOS and Flutter apps with clean architecture, strong offline behavior, and automated quality gates — and I use the web to demo craft clearly.',
   location: 'Istanbul, Türkiye (UTC+3) · remote / hybrid',
+  locationShort: 'Istanbul, Türkiye',
   availability: 'Available immediately — full-time & contract',
   email: 'ilkersevim2007@gmail.com',
   links: {
