@@ -1,23 +1,24 @@
-# React Web Portfolio
+# İlker Sevim — Personal Website
 
-Public portfolio demo for **İlker Sevim** — Vite + React + TypeScript.
+**Live at [redjadet.github.io/react-web-portfolio](https://redjadet.github.io/react-web-portfolio/)**
 
-**Repo:** https://github.com/redjadet/react-web-portfolio  
-**Live:** https://redjadet.github.io/react-web-portfolio/
+Professional website for a senior iOS and Flutter engineer based in Istanbul. It brings together selected public projects, engineering practices, availability and contact links. React and TypeScript are demonstrated through the website itself; the mobile apps are clearly presented as portfolio references.
 
-## Stack
+## Engineering choices
 
-- Vite 8, React 19, TypeScript
-- pnpm
-- CSS variables + CSS modules (no Tailwind)
-- GitHub Pages via Actions (`base: /react-web-portfolio/`)
+- Small React components with typed content separated from presentation.
+- CSS Modules and shared design tokens; responsive layouts without a UI framework.
+- Semantic headings, skip navigation, descriptive external links, visible keyboard focus and reduced-motion support.
+- Portrait dimensions reserve space; no analytics, tracking scripts or pretend contact form.
+- Canonical URL, Person structured data and Open Graph metadata.
+- GitHub Pages deployment with frozen dependency installation, lint and TypeScript/build checks.
 
 ## Local development
 
-Requires Node 22+ (see `.nvmrc`).
+Requires Node 22+ and pnpm (see `.nvmrc`).
 
 ```bash
-pnpm install
+pnpm install --frozen-lockfile
 pnpm dev --host 127.0.0.1 --port 43123
 ```
 
@@ -29,16 +30,14 @@ pnpm build
 pnpm preview
 ```
 
-## Content
+## Update content
 
-Edit typed files under `src/content/`:
-
-- `profile.ts`
-- `projects.ts`
-- `skills.ts`
-
-Project cards use a human `title` plus the public `repo` slug.
+Edit `src/content/profile.ts`, `projects.ts` and `skills.ts`. Put static assets in `public/`; reference them through `import.meta.env.BASE_URL` to preserve the GitHub Pages project path.
 
 ## Deploy
 
-On push to `main`, `.github/workflows/deploy-pages.yml` builds and deploys to GitHub Pages. Enable Pages in repo settings → **GitHub Actions** as the source if the first deploy needs approval.
+Pushes to `main` run `.github/workflows/deploy-pages.yml`. GitHub Pages uses the GitHub Actions source and Vite's `/react-web-portfolio/` base path.
+
+## Manual review
+
+Check desktop and 320–390px mobile layouts, keyboard navigation, section anchors, reduced motion, image loading and every project/contact link before publishing. Verify the deployment at the live URL after the Actions run completes.

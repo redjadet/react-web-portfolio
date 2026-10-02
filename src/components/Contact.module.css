@@ -1,43 +1,67 @@
-.panel {
-  display: grid;
-  gap: 1.35rem;
-  max-width: 40rem;
-  padding: clamp(1.4rem, 3vw, 2rem);
-  border-radius: calc(var(--radius) + 0.1rem);
-  border: 1px solid var(--line);
-  background:
-    linear-gradient(
-      145deg,
-      color-mix(in srgb, white 82%, var(--mist)),
-      color-mix(in srgb, #cfe0e8 40%, white)
-    );
-  box-shadow: var(--shadow);
+.contact {
+  background: var(--ink);
+  color: white;
 }
-
+.layout {
+  display: grid;
+  grid-template-columns: minmax(0, 1.5fr) minmax(0, 1fr);
+  gap: 4rem;
+  align-items: center;
+}
+.title {
+  margin: 0 0 1rem;
+  font: 700 clamp(2rem, 3.4vw, 3rem)/1.15 var(--font-display);
+  letter-spacing: -0.04em;
+}
+.note {
+  margin: 0 0 1.5rem;
+  color: #d4e4e9;
+  font-size: 1.0625rem;
+}
 .actions {
   display: flex;
   flex-wrap: wrap;
-  gap: 0.75rem;
+  gap: 1rem 2rem;
+  align-items: center;
 }
-
-.note {
-  margin: 0;
-  color: var(--ink-soft);
-  font-size: 1.05rem;
+.actions > a:not(.emailButton) {
+  text-underline-offset: 5px;
+  padding: 0.6rem 0;
+  font-weight: 600;
 }
-
-.email {
-  margin: 0;
-  font-family: ui-monospace, 'SF Mono', Menlo, Consolas, monospace;
-  font-size: 0.92rem;
-}
-
-.email a {
-  color: var(--ink-soft);
-  text-decoration: none;
-  border-bottom: 1px solid color-mix(in srgb, var(--ink) 18%, transparent);
-}
-
-.email a:hover {
+.emailButton {
+  background: white;
   color: var(--ink);
+}
+.emailButton:hover {
+  background: #e5f3f0;
+}
+.email {
+  margin-top: 1.2rem;
+  display: inline-block;
+  color: #d4e4e9;
+  text-underline-offset: 5px;
+  font-size: 1rem;
+  overflow-wrap: anywhere;
+}
+.invitation {
+  border-left: 1px solid #51717e;
+  margin: 0;
+  padding: 3rem 0 3rem 2.5rem;
+  color: #d4e4e9;
+  font-size: 1.0625rem;
+}
+.contact :focus-visible {
+  outline-color: white;
+}
+@media (max-width: 800px) {
+  .layout {
+    grid-template-columns: 1fr;
+    gap: 2rem;
+  }
+  .invitation {
+    border-left: 0;
+    border-top: 1px solid #51717e;
+    padding: 1.5rem 0 0;
+  }
 }

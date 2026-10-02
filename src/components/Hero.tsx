@@ -1,39 +1,39 @@
 import styles from './Hero.module.css'
 import { profile } from '../content/profile'
-
 export function Hero() {
   return (
     <section className={styles.hero} aria-labelledby="hero-name">
-      <div className={styles.atmosphere} aria-hidden="true">
-        <div className={styles.orb} />
-        <div className={styles.grid} />
-      </div>
-
-      <div className={`shell ${styles.inner}`}>
+      <div className={['shell', styles.inner].join(' ')}>
         <div className={styles.copy}>
-          <h1 id="hero-name" className={`${styles.brand} rise`}>
+          <h1 id="hero-name" className={styles.name}>
             {profile.name}
           </h1>
-          <p className={`${styles.headline} rise rise-delay-1`}>{profile.headline}</p>
-          <p className={`${styles.support} rise rise-delay-2`}>{profile.support}</p>
-          <div className={`${styles.actions} rise rise-delay-3`}>
-            <a className="btn btn--primary" href="#work">
-              Selected work
-            </a>
-            <a className="btn btn--ghost" href="#contact">
-              Contact
-            </a>
-          </div>
-        </div>
-
-        <aside className={`${styles.visual} rise rise-delay-1`} aria-hidden="true">
           <p className={styles.role}>{profile.role}</p>
-          <div className={styles.mark}>IS</div>
-          <div className={styles.visualMeta}>
-            <span>iOS · Flutter · Web</span>
-            <span>Public craft, production habits</span>
+          <p className={styles.headline}>{profile.headline}</p>
+          <p className={styles.support}>{profile.support}</p>
+          <div className={styles.actions}>
+            <a className="btn btn--primary" href="#work">
+              Explore my work
+            </a>
+            <a className="btn btn--outline" href="#contact">
+              Get in touch
+            </a>
           </div>
-        </aside>
+          <p className={styles.availability}>
+            Istanbul, Türkiye · Available immediately
+            <br />
+            Remote from Türkiye · Full-time &amp; contract
+          </p>
+        </div>
+        <img
+          className={styles.portrait}
+          src={import.meta.env.BASE_URL + 'ilker-sevim.jpg'}
+          alt="Portrait of İlker Sevim"
+          width="961"
+          height="1280"
+          fetchPriority="high"
+          decoding="async"
+        />
       </div>
     </section>
   )

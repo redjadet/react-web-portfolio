@@ -1,45 +1,41 @@
 import styles from './Contact.module.css'
 import { profile } from '../content/profile'
-
+import { ExternalLink } from './ExternalLink'
 export function Contact() {
   return (
-    <section id="contact" className="section" aria-labelledby="contact-title">
-      <div className="shell">
-        <p className="section__eyebrow">Contact</p>
-        <h2 id="contact-title" className="section__title">
-          Let’s talk about the next build
-        </h2>
-        <div className={styles.panel}>
+    <section
+      id="contact"
+      className={['section', styles.contact].join(' ')}
+      aria-labelledby="contact-title"
+    >
+      <div className={['shell', styles.layout].join(' ')}>
+        <div>
+          <h2 id="contact-title" className={styles.title}>
+            Let’s build something reliable.
+          </h2>
           <p className={styles.note}>
-            Prefer email for hiring conversations, GitHub for code, LinkedIn for a quick intro.
+            Open to iOS, Flutter and mobile engineering opportunities.
+            <br />
+            Remote from Türkiye, or hybrid and onsite in Istanbul.
           </p>
           <div className={styles.actions}>
-            <a className="btn btn--primary" href={`mailto:${profile.email}`}>
+            <a
+              className={['btn', styles.emailButton].join(' ')}
+              href={'mailto:' + profile.email}
+            >
               Email me
             </a>
-            <a
-              className="btn btn--ghost"
-              href={profile.links.github}
-              target="_blank"
-              rel="noopener noreferrer"
-            >
-              GitHub
-              <span className="visually-hidden"> (opens in a new tab)</span>
-            </a>
-            <a
-              className="btn btn--ghost"
-              href={profile.links.linkedin}
-              target="_blank"
-              rel="noopener noreferrer"
-            >
-              LinkedIn
-              <span className="visually-hidden"> (opens in a new tab)</span>
-            </a>
+            <ExternalLink href={profile.links.linkedin}>LinkedIn</ExternalLink>
+            <ExternalLink href={profile.links.github}>GitHub</ExternalLink>
           </div>
-          <p className={styles.email}>
-            <a href={`mailto:${profile.email}`}>{profile.email}</a>
-          </p>
+          <a className={styles.email} href={'mailto:' + profile.email}>
+            {profile.email}
+          </a>
         </div>
+        <p className={styles.invitation}>
+          For hiring conversations, tell me about the product, team and the
+          role.
+        </p>
       </div>
     </section>
   )

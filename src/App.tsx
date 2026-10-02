@@ -14,7 +14,7 @@ export default function App() {
       </a>
       <div id="top">
         <Header />
-        <main id="main">
+        <main id="main" tabIndex={-1}>
           <Hero />
           <Projects />
           <Skills />

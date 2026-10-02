@@ -1,34 +1,23 @@
 .footer {
-  border-top: 1px solid var(--line);
-  padding: 1.6rem 0 2.75rem;
+  padding: 1.7rem 0;
 }
-
 .inner {
   display: flex;
   flex-wrap: wrap;
-  gap: 0.75rem 1.5rem;
+  gap: 1rem 2rem;
   justify-content: space-between;
   align-items: center;
-  color: var(--slate);
-  font-size: 0.92rem;
+  color: var(--muted);
+  font-size: 0.875rem;
 }
-
 .inner p {
   margin: 0;
 }
-
 .links {
   display: flex;
   flex-wrap: wrap;
-  gap: 0.85rem 1rem;
+  gap: 1.3rem;
 }
-
 .links a {
-  color: var(--ink-soft);
-  font-weight: 600;
-  text-decoration: none;
-}
-
-.links a:hover {
-  color: var(--ink);
+  text-underline-offset: 4px;
 }

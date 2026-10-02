@@ -1,52 +1,39 @@
+.about {
+  background: var(--surface);
+}
 .layout {
   display: grid;
-  grid-template-columns: minmax(0, 1.35fr) minmax(0, 0.85fr);
-  gap: clamp(1.5rem, 4vw, 3rem);
+  grid-template-columns: minmax(0, 1.65fr) minmax(0, 1fr);
+  gap: 4rem;
   align-items: start;
 }
-
-.copy {
-  display: grid;
-  gap: 1rem;
-  max-width: 42rem;
-}
-
 .copy p {
-  margin: 0;
-  color: var(--ink-soft);
-  font-size: 1.06rem;
+  margin: 1.5rem 0 0;
+  color: var(--muted);
 }
-
 .facts {
   margin: 0;
-  display: grid;
-  gap: 1.15rem;
-  padding: 1.25rem 0 0;
+}
+.facts div {
+  padding: 1.5rem 0;
   border-top: 1px solid var(--line);
 }
-
-.facts div {
-  display: grid;
-  gap: 0.3rem;
-}
-
 .facts dt {
-  font-size: 0.76rem;
-  letter-spacing: 0.12em;
+  font-size: 0.75rem;
   text-transform: uppercase;
+  letter-spacing: 0.12em;
+  color: var(--muted);
   font-weight: 700;
-  color: var(--slate);
+  margin-bottom: 0.5rem;
 }
-
 .facts dd {
   margin: 0;
-  font-weight: 600;
-  color: var(--ink);
-  line-height: 1.4;
+  font-size: 1rem;
+  line-height: 1.65;
 }
-
 @media (max-width: 800px) {
   .layout {
     grid-template-columns: 1fr;
+    gap: 2rem;
   }
 }

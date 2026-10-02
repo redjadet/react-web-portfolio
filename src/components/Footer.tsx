@@ -1,25 +1,17 @@
 import styles from './Footer.module.css'
 import { profile } from '../content/profile'
-
-const COPYRIGHT_YEAR = 2026
-
+import { ExternalLink } from './ExternalLink'
 export function Footer() {
   return (
     <footer className={styles.footer}>
-      <div className={`shell ${styles.inner}`}>
-        <p>
-          © {COPYRIGHT_YEAR} {profile.name}
-        </p>
+      <div className={['shell', styles.inner].join(' ')}>
+        <p>© 2026 {profile.name}</p>
         <div className={styles.links}>
-          <a href={profile.links.github} target="_blank" rel="noopener noreferrer">
-            GitHub
-            <span className="visually-hidden"> (opens in a new tab)</span>
-          </a>
-          <a href={`mailto:${profile.email}`}>Email</a>
-          <a href={profile.links.portfolioRepo} target="_blank" rel="noopener noreferrer">
-            This repo
-            <span className="visually-hidden"> (opens in a new tab)</span>
-          </a>
+          <ExternalLink href={profile.links.github}>GitHub</ExternalLink>
+          <ExternalLink href={profile.links.linkedin}>LinkedIn</ExternalLink>
+          <ExternalLink href={profile.links.portfolioRepo}>
+            Website source
+          </ExternalLink>
         </div>
       </div>
     </footer>

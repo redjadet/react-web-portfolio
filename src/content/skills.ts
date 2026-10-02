@@ -1,28 +1,57 @@
-export type SkillGroup = {
-  id: string
-  title: string
-  items: string[]
-}
-
+export type SkillGroup = { id: string; title: string; items: string[] }
 export const skillGroups: SkillGroup[] = [
   {
-    id: 'mobile',
-    title: 'Mobile platforms',
-    items: ['Swift', 'SwiftUI', 'UIKit', 'Dart', 'Flutter', 'Kotlin / Compose (comparison work)'],
+    id: 'native',
+    title: 'Native iOS & iPadOS',
+    items: [
+      'Swift · SwiftUI · UIKit',
+      'Objective-C · Swift Concurrency',
+      'Xcode · CocoaPods',
+    ],
+  },
+  {
+    id: 'flutter',
+    title: 'Flutter & Dart',
+    items: [
+      'BLoC / Cubit · Clean Architecture',
+      'Responsive and adaptive UI',
+      'Swift / Kotlin platform integration',
+    ],
   },
   {
     id: 'architecture',
-    title: 'Architecture & quality',
-    items: ['Clean Architecture', 'BLoC / Cubit', 'Offline-first patterns', 'Automated tests', 'CI/CD'],
+    title: 'Architecture & data',
+    items: [
+      'Modular features · Dependency injection',
+      'REST APIs · Offline caching',
+      'Firebase · Supabase',
+    ],
   },
   {
-    id: 'web-demo',
-    title: 'Web demo craft',
-    items: ['React', 'TypeScript', 'Vite', 'Accessible UI', 'Static deploy'],
+    id: 'quality',
+    title: 'Quality & delivery',
+    items: [
+      'Unit · UI · Widget · Integration tests',
+      'GitHub Actions · Fastlane',
+      'App Store & Google Play workflows',
+    ],
   },
   {
-    id: 'delivery',
-    title: 'Delivery',
-    items: ['GitHub Actions', 'pub.dev packages', 'App Store / Play readiness', 'Technical writing for agents & teams'],
+    id: 'web',
+    title: 'React web',
+    items: [
+      'React · TypeScript · Vite',
+      'HTML / CSS · CSS Modules',
+      'Responsive and accessible UI',
+    ],
+  },
+  {
+    id: 'ai',
+    title: 'AI-assisted development',
+    items: [
+      'Cursor · Codex · Reusable AI skills',
+      'Scoped changes and architecture review',
+      'Human code review and test verification',
+    ],
   },
 ]

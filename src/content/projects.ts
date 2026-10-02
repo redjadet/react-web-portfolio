@@ -1,69 +1,105 @@
+export type ProjectLink = { label: string; href: string }
 export type Project = {
   id: string
-  /** Human-readable title shown in UI */
   title: string
-  /** Public GitHub repository name */
-  repo: string
   blurb: string
   tags: string[]
-  href: string
-  featured?: boolean
+  evidence: string[]
+  links: ProjectLink[]
 }
 
 export const projects: Project[] = [
   {
     id: 'flutter-bloc-app',
-    title: 'Flutter portfolio system',
-    repo: 'flutter_bloc_app',
+    title: 'Flutter engineering portfolio',
     blurb:
-      'Production-minded Flutter app with BLoC/Cubit, Clean Architecture, offline sync, native Swift/Kotlin interop, automated tests, and CI/CD — plus a live web demo and Play release path.',
-    tags: ['Flutter', 'BLoC', 'Clean Architecture', 'Offline'],
-    href: 'https://github.com/redjadet/flutter_bloc_app',
-    featured: true,
+      'A cross-platform reference app with BLoC / Cubit, offline synchronization and native Swift / Kotlin integration.',
+    tags: ['Flutter', 'Dart', 'Clean Architecture'],
+    evidence: [
+      'Layered features and predictable state',
+      'Offline data and platform integration',
+      'Unit, widget, golden and integration tests',
+    ],
+    links: [
+      {
+        label: 'Live demo',
+        href: 'https://redjadet.github.io/flutter_bloc_app/',
+      },
+      {
+        label: 'Google Play',
+        href: 'https://play.google.com/store/apps/details?id=com.ilkersevim.blocflutter',
+      },
+      {
+        label: 'Source & architecture',
+        href: 'https://github.com/redjadet/flutter_bloc_app',
+      },
+    ],
   },
   {
     id: 'super-demo-ios',
-    title: 'SwiftUI multiplatform demo',
-    repo: 'super_demo_ios',
+    title: 'Native iOS & iPadOS portfolio',
     blurb:
-      'SwiftUI/SwiftData sample for iOS, iPadOS, and macOS: offline feed, URLSession networking, UIKit interop, optional Flutter add-to-app, and CI checks.',
-    tags: ['SwiftUI', 'SwiftData', 'iOS', 'macOS'],
-    href: 'https://github.com/redjadet/super_demo_ios',
+      'A SwiftUI / SwiftData sample with an offline feed, concurrency and UIKit interoperability.',
+    tags: ['SwiftUI', 'SwiftData', 'iOS / iPadOS'],
+    evidence: [
+      'Feature layers and dependency injection',
+      'Offline cache and URLSession networking',
+      'UI tests and an optional Flutter bridge',
+    ],
+    links: [
+      {
+        label: 'Source & reviewer guide',
+        href: 'https://github.com/redjadet/super_demo_ios',
+      },
+    ],
   },
+  {
+    id: 'react-website',
+    title: 'React & TypeScript personal website',
+    blurb:
+      'This responsive website: typed content, accessible navigation and a small, reusable component system.',
+    tags: ['React', 'TypeScript', 'Vite', 'CSS Modules'],
+    evidence: [
+      'Accessible and responsive design',
+      'Typed content and reusable components',
+      'Optimized build and clean project structure',
+    ],
+    links: [
+      {
+        label: 'View source',
+        href: 'https://github.com/redjadet/react-web-portfolio',
+      },
+    ],
+  },
+]
+
+export const openSourceProjects = [
   {
     id: 'type-safe-bloc',
     title: 'Type-safe BLoC helpers',
-    repo: 'ilkersevim_type_safe_bloc',
     blurb:
-      'Published Flutter package with compile-time-safe context extensions, selectors, builders, listeners, and consumers for BLoC/Cubit.',
-    tags: ['Dart', 'pub.dev', 'BLoC'],
+      'Published Flutter package with typed selectors, builders and listeners for BLoC / Cubit.',
     href: 'https://github.com/redjadet/ilkersevim_type_safe_bloc',
   },
   {
     id: 'platform-comparison',
     title: 'Cross-platform comparison study',
-    repo: 'iOS_Android_Flutter_Comparison',
     blurb:
-      'The same sample product built in SwiftUI, Jetpack Compose, and Flutter to compare UI fidelity and shared mobile implementation tradeoffs.',
-    tags: ['SwiftUI', 'Compose', 'Flutter'],
+      'One sample product in SwiftUI, Jetpack Compose and Flutter, with implementation tradeoffs.',
     href: 'https://github.com/redjadet/iOS_Android_Flutter_Comparison',
   },
   {
     id: 'safe-parse',
     title: 'Safe parse utilities',
-    repo: 'ilkersevim_safe_parse',
     blurb:
-      'Small Dart helpers for safely parsing dynamic / JSON-like values without brittle casts.',
-    tags: ['Dart', 'Parsing'],
+      'Dart helpers for predictable parsing of dynamic and JSON-like values.',
     href: 'https://github.com/redjadet/ilkersevim_safe_parse',
   },
   {
     id: 'async-utils',
     title: 'Async coalescing utilities',
-    repo: 'ilkersevim_async_utils',
     blurb:
-      'Dependency-free Dart utilities for async coalescing and request-staleness guards in UI-heavy apps.',
-    tags: ['Dart', 'Async'],
+      'Dependency-free Dart utilities for coalescing work and rejecting stale results.',
     href: 'https://github.com/redjadet/ilkersevim_async_utils',
   },
-]
+] as const

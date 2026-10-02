@@ -1,42 +1,56 @@
 import styles from './About.module.css'
 import { profile } from '../content/profile'
-
 export function About() {
   return (
-    <section id="about" className="section" aria-labelledby="about-title">
-      <div className="shell">
-        <p className="section__eyebrow">About</p>
-        <h2 id="about-title" className="section__title">
-          Senior mobile engineer, clear demos
-        </h2>
-        <div className={styles.layout}>
-          <div className={styles.copy}>
-            <p>
-              I am {profile.name}, based in {profile.locationShort}. Day-to-day work is iOS and
-              Flutter product engineering — architecture, offline resilience, native interop, and
-              shipping with tests and CI.
-            </p>
-            <p>
-              This site is a Vite + React + TypeScript portfolio demo: content lives in typed files,
-              styling is intentional CSS, and the goal is a readable first impression rather than a
-              CMS.
-            </p>
-          </div>
-          <dl className={styles.facts}>
-            <div>
-              <dt>Location</dt>
-              <dd>{profile.location}</dd>
-            </div>
-            <div>
-              <dt>Availability</dt>
-              <dd>{profile.availability}</dd>
-            </div>
-            <div>
-              <dt>Focus</dt>
-              <dd>iOS · Flutter · production quality</dd>
-            </div>
-          </dl>
+    <section
+      id="about"
+      className={['section', styles.about].join(' ')}
+      aria-labelledby="about-title"
+    >
+      <div className={['shell', styles.layout].join(' ')}>
+        <div className={styles.copy}>
+          <h2 id="about-title" className="section__title">
+            Experience with real product constraints
+          </h2>
+          <p>
+            I am a senior mobile engineer based in Istanbul. My experience spans
+            banking, payments, telecom and secure communications, including
+            native iPhone and iPad apps, shared iOS frameworks and
+            cross-platform delivery.
+          </p>
+          <p>
+            I have led mobile development, mentored engineers and automated
+            build and release workflows. My public projects make architecture
+            decisions, platform integration and testing practices easy to
+            review.
+          </p>
+          <p>
+            I bring the same care to AI-assisted development: useful context,
+            scoped changes, human review and verification.
+          </p>
         </div>
+        <dl className={styles.facts}>
+          <div>
+            <dt>Location</dt>
+            <dd>{profile.location}</dd>
+          </div>
+          <div>
+            <dt>Working arrangements</dt>
+            <dd>{profile.arrangements}</dd>
+          </div>
+          <div>
+            <dt>Availability</dt>
+            <dd>{profile.availability}</dd>
+          </div>
+          <div>
+            <dt>Education</dt>
+            <dd>
+              BSc Computer Engineering · Işık University
+              <br />
+              MBA · Maltepe University
+            </dd>
+          </div>
+        </dl>
       </div>
     </section>
   )
