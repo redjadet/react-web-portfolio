@@ -3,7 +3,7 @@
 Public portfolio demo for **İlker Sevim** — Vite + React + TypeScript.
 
 **Repo:** https://github.com/redjadet/react-web-portfolio  
-**Live (after Pages enabled):** https://redjadet.github.io/react-web-portfolio/
+**Live:** https://redjadet.github.io/react-web-portfolio/
 
 ## Stack
 
@@ -18,8 +18,10 @@ Requires Node 22+ (see `.nvmrc`).
 
 ```bash
 pnpm install
-pnpm dev
+pnpm dev --host 127.0.0.1 --port 43123
 ```
+
+Open http://127.0.0.1:43123/react-web-portfolio/
 
 ```bash
 pnpm lint
@@ -34,6 +36,8 @@ Edit typed files under `src/content/`:
 - `profile.ts`
 - `projects.ts`
 - `skills.ts`
+
+Project cards use a human `title` plus the public `repo` slug.
 
 ## Deploy
 

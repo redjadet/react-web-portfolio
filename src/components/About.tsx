@@ -9,18 +9,33 @@ export function About() {
         <h2 id="about-title" className="section__title">
           Senior mobile engineer, clear demos
         </h2>
-        <div className={styles.panel}>
-          <p>
-            I am {profile.name}, based in {profile.locationShort}. My day-to-day is
-            iOS and Flutter product work — architecture, offline resilience, native interop, and
-            shipping with tests and CI.
-          </p>
-          <p>
-            This site is a Vite + React + TypeScript portfolio demo: content lives in typed files,
-            styling is intentional CSS, and the goal is a readable first impression rather than a
-            CMS.
-          </p>
-          <p>{profile.availability}.</p>
+        <div className={styles.layout}>
+          <div className={styles.copy}>
+            <p>
+              I am {profile.name}, based in {profile.locationShort}. Day-to-day work is iOS and
+              Flutter product engineering — architecture, offline resilience, native interop, and
+              shipping with tests and CI.
+            </p>
+            <p>
+              This site is a Vite + React + TypeScript portfolio demo: content lives in typed files,
+              styling is intentional CSS, and the goal is a readable first impression rather than a
+              CMS.
+            </p>
+          </div>
+          <dl className={styles.facts}>
+            <div>
+              <dt>Location</dt>
+              <dd>{profile.location}</dd>
+            </div>
+            <div>
+              <dt>Availability</dt>
+              <dd>{profile.availability}</dd>
+            </div>
+            <div>
+              <dt>Focus</dt>
+              <dd>iOS · Flutter · production quality</dd>
+            </div>
+          </dl>
         </div>
       </div>
     </section>

@@ -15,7 +15,7 @@ export function Contact() {
           </p>
           <div className={styles.actions}>
             <a className="btn btn--primary" href={`mailto:${profile.email}`}>
-              Email {profile.email}
+              Email me
             </a>
             <a
               className="btn btn--ghost"
@@ -36,6 +36,9 @@ export function Contact() {
               <span className="visually-hidden"> (opens in a new tab)</span>
             </a>
           </div>
+          <p className={styles.email}>
+            <a href={`mailto:${profile.email}`}>{profile.email}</a>
+          </p>
         </div>
       </div>
     </section>

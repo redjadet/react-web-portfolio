@@ -1,11 +1,16 @@
 .panel {
   display: grid;
-  gap: 1.25rem;
-  padding: 1.5rem;
-  border-radius: var(--radius);
+  gap: 1.35rem;
+  max-width: 40rem;
+  padding: clamp(1.4rem, 3vw, 2rem);
+  border-radius: calc(var(--radius) + 0.1rem);
   border: 1px solid var(--line);
   background:
-    linear-gradient(135deg, color-mix(in srgb, white 75%, var(--mist)), color-mix(in srgb, #efe4d2 55%, white));
+    linear-gradient(
+      145deg,
+      color-mix(in srgb, white 82%, var(--mist)),
+      color-mix(in srgb, #cfe0e8 40%, white)
+    );
   box-shadow: var(--shadow);
 }
 
@@ -18,4 +23,21 @@
 .note {
   margin: 0;
   color: var(--ink-soft);
+  font-size: 1.05rem;
+}
+
+.email {
+  margin: 0;
+  font-family: ui-monospace, 'SF Mono', Menlo, Consolas, monospace;
+  font-size: 0.92rem;
+}
+
+.email a {
+  color: var(--ink-soft);
+  text-decoration: none;
+  border-bottom: 1px solid color-mix(in srgb, var(--ink) 18%, transparent);
+}
+
+.email a:hover {
+  color: var(--ink);
 }

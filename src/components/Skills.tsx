@@ -13,8 +13,11 @@ export function Skills() {
           Grouped by how I actually ship: platforms, architecture, demo craft, and delivery.
         </p>
         <div className={styles.grid}>
-          {skillGroups.map((group) => (
-            <article key={group.id} className={styles.card}>
+          {skillGroups.map((group, index) => (
+            <article key={group.id} className={styles.group}>
+              <p className={styles.index} aria-hidden="true">
+                {String(index + 1).padStart(2, '0')}
+              </p>
               <h3 className={styles.title}>{group.title}</h3>
               <ul className={styles.list}>
                 {group.items.map((item) => (

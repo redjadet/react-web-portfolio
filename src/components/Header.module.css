@@ -1,52 +1,79 @@
-.site-header {
+.header {
   position: sticky;
   top: 0;
   z-index: 20;
-  backdrop-filter: blur(14px);
-  background: color-mix(in srgb, var(--paper) 78%, transparent);
+  min-height: var(--header-h);
+  backdrop-filter: blur(16px) saturate(1.15);
+  background: color-mix(in srgb, var(--paper) 82%, transparent);
   border-bottom: 1px solid var(--line);
 }
 
-.site-header__inner {
+.inner {
   display: flex;
   align-items: center;
   justify-content: space-between;
   gap: 1rem;
-  min-height: 4rem;
+  min-height: var(--header-h);
 }
 
-.site-header__brand {
+.brand {
   font-family: var(--font-display);
   font-weight: 700;
-  letter-spacing: -0.03em;
+  letter-spacing: -0.035em;
   text-decoration: none;
-  font-size: 1.05rem;
+  font-size: 1.08rem;
 }
 
-.site-header__nav {
+.nav {
   display: flex;
   flex-wrap: wrap;
-  gap: 0.35rem 1rem;
+  gap: 0.2rem 1.1rem;
   justify-content: flex-end;
 }
 
-.site-header__nav a {
+.nav a {
+  position: relative;
   text-decoration: none;
   color: var(--ink-soft);
   font-size: 0.92rem;
   font-weight: 600;
+  padding: 0.2rem 0;
+  transition: color 160ms ease;
 }
 
-.site-header__nav a:hover {
+.nav a::after {
+  content: '';
+  position: absolute;
+  left: 0;
+  right: 0;
+  bottom: -0.15rem;
+  height: 2px;
+  background: var(--accent);
+  transform: scaleX(0);
+  transform-origin: left;
+  transition: transform 180ms ease;
+}
+
+.nav a:hover,
+.nav a:focus-visible {
   color: var(--ink);
 }
 
+.nav a:hover::after,
+.nav a:focus-visible::after {
+  transform: scaleX(1);
+}
+
 @media (max-width: 640px) {
-  .site-header__nav {
-    gap: 0.25rem 0.75rem;
+  .nav {
+    gap: 0.15rem 0.7rem;
   }
 
-  .site-header__nav a {
-    font-size: 0.85rem;
+  .nav a {
+    font-size: 0.84rem;
+  }
+
+  .brand {
+    font-size: 0.98rem;
   }
 }

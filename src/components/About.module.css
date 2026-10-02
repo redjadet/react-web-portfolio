@@ -1,15 +1,52 @@
-.panel {
+.layout {
   display: grid;
-  gap: 1rem;
-  max-width: 44rem;
-  padding: 1.5rem;
-  border-radius: var(--radius);
-  border: 1px solid var(--line);
-  background: color-mix(in srgb, white 68%, var(--mist));
+  grid-template-columns: minmax(0, 1.35fr) minmax(0, 0.85fr);
+  gap: clamp(1.5rem, 4vw, 3rem);
+  align-items: start;
 }
 
-.panel p {
+.copy {
+  display: grid;
+  gap: 1rem;
+  max-width: 42rem;
+}
+
+.copy p {
   margin: 0;
   color: var(--ink-soft);
-  font-size: 1.05rem;
+  font-size: 1.06rem;
+}
+
+.facts {
+  margin: 0;
+  display: grid;
+  gap: 1.15rem;
+  padding: 1.25rem 0 0;
+  border-top: 1px solid var(--line);
+}
+
+.facts div {
+  display: grid;
+  gap: 0.3rem;
+}
+
+.facts dt {
+  font-size: 0.76rem;
+  letter-spacing: 0.12em;
+  text-transform: uppercase;
+  font-weight: 700;
+  color: var(--slate);
+}
+
+.facts dd {
+  margin: 0;
+  font-weight: 600;
+  color: var(--ink);
+  line-height: 1.4;
+}
+
+@media (max-width: 800px) {
+  .layout {
+    grid-template-columns: 1fr;
+  }
 }

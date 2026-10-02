@@ -10,12 +10,12 @@ const links = [
 
 export function Header() {
   return (
-    <header className={styles['site-header']}>
-      <div className={`shell ${styles['site-header__inner']}`}>
-        <a className={styles['site-header__brand']} href="#top">
+    <header className={styles.header}>
+      <div className={`shell ${styles.inner}`}>
+        <a className={styles.brand} href="#top">
           {profile.name}
         </a>
-        <nav className={styles['site-header__nav']} aria-label="Primary">
+        <nav className={styles.nav} aria-label="Primary">
           {links.map((link) => (
             <a key={link.href} href={link.href}>
               {link.label}
