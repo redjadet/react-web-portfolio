@@ -1,0 +1,15 @@
+.panel {
+  display: grid;
+  gap: 1rem;
+  max-width: 44rem;
+  padding: 1.5rem;
+  border-radius: var(--radius);
+  border: 1px solid var(--line);
+  background: color-mix(in srgb, white 68%, var(--mist));
+}
+
+.panel p {
+  margin: 0;
+  color: var(--ink-soft);
+  font-size: 1.05rem;
+}

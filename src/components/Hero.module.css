@@ -1,0 +1,133 @@
+.hero {
+  display: grid;
+  grid-template-columns: 1.15fr 0.85fr;
+  gap: clamp(1.5rem, 4vw, 3rem);
+  align-items: center;
+  min-height: calc(100svh - 4rem);
+  padding: clamp(2rem, 6vw, 4rem) 0 clamp(3rem, 7vw, 5rem);
+}
+
+.copy {
+  max-width: 38rem;
+}
+
+.brand {
+  margin: 0 0 1rem;
+  font-family: var(--font-display);
+  font-size: clamp(3rem, 9vw, 5.6rem);
+  line-height: 0.92;
+  letter-spacing: -0.05em;
+}
+
+.role {
+  margin: 0 0 0.85rem;
+  font-size: 1.05rem;
+  font-weight: 700;
+  color: var(--accent-ink);
+}
+
+.headline {
+  margin: 0 0 1rem;
+  font-family: var(--font-display);
+  font-size: clamp(1.35rem, 2.8vw, 1.85rem);
+  line-height: 1.2;
+  letter-spacing: -0.03em;
+}
+
+.summary {
+  margin: 0 0 1.5rem;
+  color: var(--ink-soft);
+  font-size: 1.05rem;
+}
+
+.meta {
+  margin: 0 0 1.75rem;
+  color: var(--slate);
+  font-size: 0.95rem;
+}
+
+.metaBreak {
+  display: inline;
+}
+
+@media (max-width: 560px) {
+  .metaBreak {
+    display: block;
+    margin-top: 0.25rem;
+  }
+}
+
+.actions {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.75rem;
+}
+
+.visual {
+  position: relative;
+  min-height: 18rem;
+  border-radius: calc(var(--radius) + 0.35rem);
+  overflow: hidden;
+  background:
+    linear-gradient(145deg, #0c3c38 0%, #165a53 42%, #2f6f68 70%, #d97706 140%);
+  box-shadow: var(--shadow);
+  color: #f5f7f4;
+  padding: clamp(1.25rem, 3vw, 2rem);
+  display: grid;
+  align-content: space-between;
+}
+
+.visual::after {
+  content: '';
+  position: absolute;
+  inset: auto -20% -30% 20%;
+  height: 70%;
+  background: radial-gradient(circle, rgba(232, 93, 4, 0.45), transparent 65%);
+  pointer-events: none;
+}
+
+.mark {
+  position: relative;
+  z-index: 1;
+  font-family: var(--font-display);
+  font-size: clamp(4rem, 10vw, 6.5rem);
+  font-weight: 800;
+  letter-spacing: -0.08em;
+  line-height: 0.85;
+}
+
+.mark span {
+  display: block;
+  opacity: 0.55;
+  font-size: 0.35em;
+  letter-spacing: 0.18em;
+  text-transform: uppercase;
+  font-weight: 700;
+  margin-bottom: 0.6rem;
+}
+
+.visualFooter {
+  position: relative;
+  z-index: 1;
+  display: grid;
+  gap: 0.35rem;
+  font-size: 0.95rem;
+}
+
+.visualFooter strong {
+  font-family: var(--font-display);
+  font-size: 1.15rem;
+  letter-spacing: -0.02em;
+}
+
+@media (max-width: 860px) {
+  .hero {
+    grid-template-columns: 1fr;
+    min-height: auto;
+  }
+
+  .visual {
+    min-height: 14rem;
+    order: -1;
+  }
+}

@@ -1,14 +1,20 @@
 # React Web Portfolio
 
-Public demo portfolio for İlker Sevim — a Vite + React + TypeScript single-page site showcasing selected work, skills, and contact paths.
+Public portfolio demo for **İlker Sevim** — Vite + React + TypeScript.
+
+**Repo:** https://github.com/redjadet/react-web-portfolio  
+**Live (after Pages enabled):** https://redjadet.github.io/react-web-portfolio/
 
 ## Stack
 
-- **Vite** + **React 19** + **TypeScript**
-- **pnpm** for installs
-- Deploy target: static hosting (GitHub Pages or similar)
+- Vite 8, React 19, TypeScript
+- pnpm
+- CSS variables + CSS modules (no Tailwind)
+- GitHub Pages via Actions (`base: /react-web-portfolio/`)
 
 ## Local development
+
+Requires Node 22+ (see `.nvmrc`).
 
 ```bash
 pnpm install
@@ -16,10 +22,19 @@ pnpm dev
 ```
 
 ```bash
+pnpm lint
 pnpm build
 pnpm preview
 ```
 
-## Status
+## Content
 
-Scaffold only. Full UI implementation follows the project plan in the React_Web Agent Store (`docs/react-portfolio-plan.md`).
+Edit typed files under `src/content/`:
+
+- `profile.ts`
+- `projects.ts`
+- `skills.ts`
+
+## Deploy
+
+On push to `main`, `.github/workflows/deploy-pages.yml` builds and deploys to GitHub Pages. Enable Pages in repo settings → **GitHub Actions** as the source if the first deploy needs approval.
