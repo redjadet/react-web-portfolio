@@ -1,8 +1,12 @@
 # İlker Sevim — Personal Website
 
-**Live at [redjadet.github.io/react-web-portfolio](https://redjadet.github.io/react-web-portfolio/)**
+[![Live site](https://img.shields.io/badge/site-live-0B6E4F?logo=githubpages&logoColor=white)](https://redjadet.github.io/react-web-portfolio/)
+[![Deploy GitHub Pages](https://github.com/redjadet/react-web-portfolio/actions/workflows/deploy-pages.yml/badge.svg)](https://github.com/redjadet/react-web-portfolio/actions/workflows/deploy-pages.yml)
+[![TypeScript](https://img.shields.io/badge/TypeScript-3178C6?logo=typescript&logoColor=white)](https://www.typescriptlang.org/)
+[![Vite](https://img.shields.io/badge/Vite-646CFF?logo=vite&logoColor=white)](https://vite.dev/)
+[![Node.js 22](https://img.shields.io/badge/Node.js-22-339933?logo=nodedotjs&logoColor=white)](https://nodejs.org/)
 
-Professional website for a senior iOS and Flutter engineer based in Istanbul. It brings together selected public projects, engineering practices, availability and contact links. React and TypeScript are demonstrated through the website itself; the mobile apps are clearly presented as portfolio references.
+Professional website for a senior iOS and Flutter engineer based in Istanbul. Live at [redjadet.github.io/react-web-portfolio](https://redjadet.github.io/react-web-portfolio/). It brings together selected public projects, engineering practices, availability and contact links. React and TypeScript are demonstrated through the website itself; the mobile apps are clearly presented as portfolio references.
 
 ## Engineering choices
 
