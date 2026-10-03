@@ -10,7 +10,7 @@ Professional website for a senior iOS and Flutter engineer based in Istanbul. It
 - CSS Modules and shared design tokens; responsive layouts without a UI framework.
 - Semantic headings, skip navigation, descriptive external links, visible keyboard focus and reduced-motion support.
 - Portrait dimensions reserve space; no analytics, tracking scripts or pretend contact form.
-- Canonical URL, Person structured data and Open Graph metadata.
+- Canonical URL, robots/sitemap, Person structured data and Open Graph metadata.
 - GitHub Pages deployment with frozen dependency installation, lint and TypeScript/build checks.
 
 ## Local development
