@@ -10,9 +10,9 @@ Professional website for a senior iOS and Flutter engineer based in Istanbul. Li
 
 ![Portfolio preview — hero and selected work sections](public/og.png)
 
-## For hiring reviewers
+## For technical reviewers
 
-If you have a few minutes before an interview, this order keeps signal high:
+Suggested reading order:
 
 | Priority | What to open | Why |
 | --- | --- | --- |
