@@ -115,7 +115,7 @@ a {
   color: white;
   text-decoration: none;
 }
-.skip-link:focus {
+.skip-link:focus-visible {
   top: 1rem;
 }
 .visually-hidden {

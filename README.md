@@ -8,6 +8,20 @@
 
 Professional website for a senior iOS and Flutter engineer based in Istanbul. Live at [redjadet.github.io/react-web-portfolio](https://redjadet.github.io/react-web-portfolio/). It brings together selected public projects, engineering practices, availability and contact links. React and TypeScript are demonstrated through the website itself; the mobile apps are clearly presented as portfolio references.
 
+![Portfolio preview — hero and selected work sections](public/og.png)
+
+## For hiring reviewers
+
+If you have a few minutes before an interview, this order keeps signal high:
+
+| Priority | What to open | Why |
+| --- | --- | --- |
+| 1 | [Flutter portfolio — 3-minute review](https://github.com/redjadet/flutter_bloc_app#3-minute-review) | Cross-platform architecture, offline-first counter, native bridges, tests |
+| 2 | [iOS portfolio — 3-minute path](https://github.com/redjadet/super_demo_ios#3-minute-path) | SwiftUI layers, SwiftData cache, UIKit showcase, optional Flutter embed |
+| 3 | [This repository](https://github.com/redjadet/react-web-portfolio) | Typed content, CSS Modules, accessibility and GitHub Pages deploy |
+
+Contact: [ilkersevim2007@gmail.com](mailto:ilkersevim2007@gmail.com) · [LinkedIn](https://www.linkedin.com/in/ilker-sevim-95020820/) · [GitHub](https://github.com/redjadet)
+
 ## Engineering choices
 
 - Small React components with typed content separated from presentation.
@@ -30,7 +44,7 @@ Open http://127.0.0.1:43123/react-web-portfolio/
 
 ```bash
 pnpm lint
-pnpm build
+pnpm check   # lint + production build
 pnpm preview
 ```
 

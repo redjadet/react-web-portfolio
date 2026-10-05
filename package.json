@@ -2,6 +2,12 @@
   "name": "react-web-portfolio",
   "private": true,
   "version": "0.1.0",
+  "description": "Personal portfolio site for İlker Sevim — senior iOS & Flutter engineer.",
+  "homepage": "https://redjadet.github.io/react-web-portfolio/",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/redjadet/react-web-portfolio.git"
+  },
   "type": "module",
   "engines": {
     "node": ">=22"
@@ -10,6 +16,7 @@
     "dev": "vite",
     "build": "tsc -b && vite build",
     "lint": "oxlint",
+    "check": "pnpm lint && pnpm build",
     "preview": "vite preview"
   },
   "dependencies": {

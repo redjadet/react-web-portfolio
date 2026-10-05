@@ -36,6 +36,11 @@
   color: var(--accent);
   text-decoration: underline;
 }
+.nav a.active {
+  color: var(--ink);
+  text-decoration: underline;
+  text-decoration-color: var(--accent);
+}
 @media (max-width: 550px) {
   .inner {
     flex-wrap: wrap;

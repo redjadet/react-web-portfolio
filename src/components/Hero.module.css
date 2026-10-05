@@ -45,6 +45,9 @@
   height: auto;
   aspect-ratio: 720 / 959;
   border-radius: 8px;
+  border: 1px solid var(--line);
+  object-fit: cover;
+  object-position: center top;
 }
 @media (max-width: 850px) {
   .inner {
