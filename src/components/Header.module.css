@@ -14,6 +14,9 @@
   min-height: var(--header-h);
 }
 .brand {
+  display: inline-flex;
+  align-items: center;
+  min-height: 44px;
   font: 700 1.1rem/1.4 var(--font-display);
   letter-spacing: -0.035em;
   text-decoration: none;
@@ -25,6 +28,11 @@
   justify-content: flex-end;
 }
 .nav a {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  min-width: 44px;
+  min-height: 44px;
   text-decoration: none;
   color: var(--muted);
   font-size: 0.9375rem;
@@ -51,6 +59,7 @@
   .brand {
     width: 100%;
     text-align: center;
+    justify-content: center;
   }
   .nav {
     gap: 1.4rem;

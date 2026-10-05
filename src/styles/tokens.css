@@ -100,7 +100,7 @@ a {
   text-decoration: underline;
   text-decoration-color: transparent;
   text-underline-offset: 5px;
-  min-height: 36px;
+  min-height: 44px;
 }
 .text-link:hover {
   text-decoration-color: currentColor;

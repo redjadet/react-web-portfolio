@@ -71,6 +71,10 @@
   }
   .portrait {
     width: min(100%, 250px);
+    margin-inline: auto;
+  }
+  .name {
+    font-size: clamp(2rem, 10vw, 2.75rem);
   }
   .role {
     margin-bottom: 1.25rem;
