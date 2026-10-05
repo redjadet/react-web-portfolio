@@ -4,7 +4,7 @@ export const profile = {
   headline:
     'I build reliable mobile experiences across iOS, iPadOS and Flutter.',
   support:
-    'Banking, payments, telecom and secure communications. Clean architecture, native integration and thoughtful delivery.',
+    'Public repos highlight architecture, offline data, native bridges and test coverage — structured for a quick technical review.',
   location: 'Istanbul, Türkiye · UTC+3',
   locationShort: 'Istanbul, Türkiye',
   arrangements: 'Remote from Türkiye; Istanbul hybrid or onsite',

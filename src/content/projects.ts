@@ -26,6 +26,10 @@ export const projects: Project[] = [
         href: 'https://redjadet.github.io/flutter_bloc_app/',
       },
       {
+        label: '3-minute review',
+        href: 'https://github.com/redjadet/flutter_bloc_app#3-minute-review',
+      },
+      {
         label: 'Google Play',
         href: 'https://play.google.com/store/apps/details?id=com.ilkersevim.blocflutter',
       },
@@ -47,6 +51,10 @@ export const projects: Project[] = [
       'UI tests and an optional Flutter bridge',
     ],
     links: [
+      {
+        label: '3-minute path',
+        href: 'https://github.com/redjadet/super_demo_ios#3-minute-path',
+      },
       {
         label: 'Source & reviewer guide',
         href: 'https://github.com/redjadet/super_demo_ios',
