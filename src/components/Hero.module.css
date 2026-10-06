@@ -1,26 +1,26 @@
 .hero {
   background: var(--surface);
-  padding: 5rem 0;
+  padding: 4.25rem 0;
 }
 .inner {
   display: grid;
-  grid-template-columns: minmax(0, 1fr) 320px;
-  gap: 3.5rem;
+  grid-template-columns: minmax(0, 1fr) 300px;
+  gap: 3rem;
   align-items: center;
 }
 .copy {
   min-width: 0;
 }
 .name {
-  margin: 0 0 0.75rem;
-  font: 800 clamp(3rem, 6vw, 4.75rem)/1.05 var(--font-display);
+  margin: 0 0 var(--space-2);
+  font: 800 var(--text-hero)/1.05 var(--font-display);
   letter-spacing: -0.05em;
   text-wrap: balance;
   overflow-wrap: anywhere;
 }
 .role {
-  margin: 0 0 1.75rem;
-  font-size: clamp(1.4rem, 2.3vw, 1.875rem);
+  margin: 0 0 var(--space-5);
+  font-size: var(--text-role);
   font-weight: 600;
   line-height: 1.3;
   letter-spacing: -0.03em;
@@ -28,59 +28,64 @@
 .headline,
 .support {
   color: var(--muted);
-  max-width: 42rem;
-  font-size: 1.125rem;
+  max-width: 40rem;
+  font-size: var(--text-lg);
 }
 .headline {
-  margin: 0 0 1rem;
+  margin: 0 0 var(--space-3);
+  color: var(--ink);
+  font-weight: 600;
+  line-height: 1.45;
 }
 .support {
-  margin: 0 0 1.9rem;
+  margin: 0 0 var(--space-6);
+  font-size: var(--text-base);
+  line-height: 1.6;
 }
 .actions {
   display: flex;
   flex-wrap: wrap;
-  gap: 1rem;
+  gap: 0.85rem;
 }
 .portrait {
-  width: 320px;
+  width: 300px;
   max-width: 100%;
   height: auto;
   aspect-ratio: 720 / 959;
-  border-radius: 8px;
+  border-radius: var(--radius);
   border: 1px solid var(--line);
   object-fit: cover;
   object-position: center top;
+  /* Calm placeholder while the photo decodes */
+  background: color-mix(in srgb, var(--line) 55%, var(--surface));
 }
 @media (max-width: 850px) {
   .inner {
-    grid-template-columns: minmax(0, 1fr) 250px;
-    gap: 2rem;
+    grid-template-columns: minmax(0, 1fr) 240px;
+    gap: var(--space-6);
   }
   .portrait {
-    width: 250px;
-  }
-  .role {
-    font-size: 1.4rem;
+    width: 240px;
   }
 }
 @media (max-width: 650px) {
   .hero {
-    padding: 3rem 0;
+    padding: 2.75rem 0;
   }
   .inner {
     grid-template-columns: 1fr;
-    gap: 2rem;
+    gap: var(--space-5);
   }
   .portrait {
-    width: min(100%, 250px);
+    width: min(100%, 240px);
     margin-inline: auto;
   }
   .name {
     font-size: clamp(2rem, 10vw, 2.75rem);
   }
   .role {
-    margin-bottom: 1.25rem;
+    margin-bottom: var(--space-4);
+    font-size: 1.3rem;
   }
   .headline,
   .support {
