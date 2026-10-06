@@ -22,11 +22,16 @@ export function Contact() {
             <a
               className={['btn', styles.emailButton].join(' ')}
               href={'mailto:' + profile.email}
+              aria-label={`Email ${profile.name}`}
             >
               Email me
             </a>
-            <ExternalLink href={profile.links.linkedin}>LinkedIn</ExternalLink>
-            <ExternalLink href={profile.links.github}>GitHub</ExternalLink>
+            <ExternalLink href={profile.links.linkedin} label="LinkedIn">
+              LinkedIn
+            </ExternalLink>
+            <ExternalLink href={profile.links.github} label="GitHub">
+              GitHub
+            </ExternalLink>
           </div>
           <a className={styles.email} href={'mailto:' + profile.email}>
             {profile.email}

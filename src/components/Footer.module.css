@@ -1,14 +1,16 @@
 .footer {
-  padding: 1.7rem 0 calc(1.7rem + env(safe-area-inset-bottom, 0px));
+  padding: 1.55rem 0 calc(1.55rem + env(safe-area-inset-bottom, 0px));
+  border-top: 1px solid var(--line);
+  background: var(--bg);
 }
 .inner {
   display: flex;
   flex-wrap: wrap;
-  gap: 1rem 2rem;
+  gap: var(--space-4) var(--space-6);
   justify-content: space-between;
   align-items: center;
   color: var(--muted);
-  font-size: 0.875rem;
+  font-size: var(--text-sm);
 }
 .inner p {
   margin: 0;
@@ -16,11 +18,21 @@
 .links {
   display: flex;
   flex-wrap: wrap;
-  gap: 1.3rem;
+  gap: 1.15rem;
 }
 .links a {
   display: inline-flex;
   align-items: center;
   min-height: 44px;
   text-underline-offset: 4px;
+  transition:
+    color var(--duration) var(--ease),
+    text-decoration-color var(--duration) var(--ease);
+}
+.links a:hover {
+  color: var(--accent);
+  text-decoration: underline;
+}
+.links a:active {
+  opacity: 0.85;
 }

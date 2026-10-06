@@ -15,7 +15,7 @@ export function Header() {
   return (
     <header className={styles.header}>
       <div className={`shell ${styles.inner}`}>
-        <a className={styles.brand} href="#top">
+        <a className={styles.brand} href="#top" aria-label={`${profile.name} — top of page`}>
           {profile.name}
         </a>
         <nav className={styles.nav} aria-label="Primary">
