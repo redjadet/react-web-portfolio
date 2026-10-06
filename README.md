@@ -4,7 +4,7 @@
 [![Deploy GitHub Pages](https://github.com/redjadet/react-web-portfolio/actions/workflows/deploy-pages.yml/badge.svg)](https://github.com/redjadet/react-web-portfolio/actions/workflows/deploy-pages.yml)
 [![TypeScript](https://img.shields.io/badge/TypeScript-3178C6?logo=typescript&logoColor=white)](https://www.typescriptlang.org/)
 [![Vite](https://img.shields.io/badge/Vite-646CFF?logo=vite&logoColor=white)](https://vite.dev/)
-[![Node.js 22](https://img.shields.io/badge/Node.js-22-339933?logo=nodedotjs&logoColor=white)](https://nodejs.org/)
+[![Node.js 24](https://img.shields.io/badge/Node.js-24-339933?logo=nodedotjs&logoColor=white)](https://nodejs.org/)
 
 Professional website for a senior iOS and Flutter engineer based in Istanbul. Live at [redjadet.github.io/react-web-portfolio](https://redjadet.github.io/react-web-portfolio/). It brings together selected public projects, engineering practices, availability and contact links. React and TypeScript are demonstrated through the website itself; the mobile apps are clearly presented as portfolio references.
 
@@ -33,7 +33,7 @@ Contact: [ilkersevim2007@gmail.com](mailto:ilkersevim2007@gmail.com) · [LinkedI
 
 ## Local development
 
-Requires Node 22+ and pnpm (see `.nvmrc`).
+Requires Node 24+ and pnpm (see `.nvmrc`).
 
 ```bash
 pnpm install --frozen-lockfile
