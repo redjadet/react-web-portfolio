@@ -1,4 +1,6 @@
 import type { ReactNode } from 'react'
+import { useLocale } from '../i18n/useLocale'
+
 export function ExternalLink({
   href,
   children,
@@ -10,7 +12,8 @@ export function ExternalLink({
   className?: string
   label?: string
 }) {
-  const opensInNewTab = ' (opens in a new tab)'
+  const { t } = useLocale()
+  const opensInNewTab = t.a11y.opensInNewTab
 
   return (
     <a

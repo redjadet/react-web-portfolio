@@ -1,6 +1,10 @@
 import styles from './About.module.css'
-import { profile } from '../content/profile'
+import { useLocale } from '../i18n/useLocale'
+
 export function About() {
+  const { t } = useLocale()
+  const educationLines = t.about.educationValue.split('\n')
+
   return (
     <section
       id="about"
@@ -10,44 +14,34 @@ export function About() {
       <div className={['shell', styles.layout].join(' ')}>
         <div className={styles.copy}>
           <h2 id="about-title" className="section__title">
-            Experience with real product constraints
+            {t.about.title}
           </h2>
-          <p>
-            I am a senior mobile engineer based in Istanbul. My experience spans
-            banking, payments, telecom and secure communications, including
-            native iPhone and iPad apps, shared iOS frameworks and
-            cross-platform delivery.
-          </p>
-          <p>
-            I have led mobile development, mentored engineers and automated
-            build and release workflows. My public projects make architecture
-            decisions, platform integration and testing practices easy to
-            review.
-          </p>
-          <p>
-            I bring the same care to AI-assisted development: useful context,
-            scoped changes, human review and verification.
-          </p>
+          {t.about.paragraphs.map((paragraph) => (
+            <p key={paragraph.slice(0, 48)}>{paragraph}</p>
+          ))}
         </div>
         <dl className={styles.facts}>
           <div>
-            <dt>Location</dt>
-            <dd>{profile.location}</dd>
+            <dt>{t.about.location}</dt>
+            <dd>{t.profile.location}</dd>
           </div>
           <div>
-            <dt>Working arrangements</dt>
-            <dd>{profile.arrangements}</dd>
+            <dt>{t.about.arrangements}</dt>
+            <dd>{t.profile.arrangements}</dd>
           </div>
           <div>
-            <dt>Availability</dt>
-            <dd>{profile.availability}</dd>
+            <dt>{t.about.availability}</dt>
+            <dd>{t.profile.availability}</dd>
           </div>
           <div>
-            <dt>Education</dt>
+            <dt>{t.about.education}</dt>
             <dd>
-              BSc Computer Engineering · Işık University
-              <br />
-              MBA · Maltepe University
+              {educationLines.map((line, index) => (
+                <span key={line}>
+                  {index > 0 ? <br /> : null}
+                  {line}
+                </span>
+              ))}
             </dd>
           </div>
         </dl>

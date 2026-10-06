@@ -1,19 +1,20 @@
 import styles from './Projects.module.css'
-import { projects, openSourceProjects } from '../content/projects'
 import { ExternalLink } from './ExternalLink'
 import { Arrow } from './Arrow'
+import { useLocale } from '../i18n/useLocale'
+
 export function Projects() {
+  const { t } = useLocale()
+
   return (
     <section id="work" className="section" aria-labelledby="work-title">
       <div className="shell">
         <h2 id="work-title" className="section__title">
-          Selected work
+          {t.work.title}
         </h2>
-        <p className="section__lead">
-          Public projects that show how I design, build and verify software.
-        </p>
+        <p className="section__lead">{t.work.lead}</p>
         <ol className={styles.projects}>
-          {projects.map((project, index) => (
+          {t.projects.map((project, index) => (
             <li key={project.id} className={styles.project}>
               <span className={styles.index} aria-hidden="true">
                 {String(index + 1).padStart(2, '0')}
@@ -28,7 +29,7 @@ export function Projects() {
                       key={link.href}
                       href={link.href}
                       className="text-link"
-                      label={project.title + ': ' + link.label}
+                      label={t.a11y.projectLink(project.title, link.label)}
                     >
                       {link.label}
                       <Arrow />
@@ -44,18 +45,18 @@ export function Projects() {
             </li>
           ))}
         </ol>
-        <h3 className={styles.moreTitle}>More open-source work</h3>
+        <h3 className={styles.moreTitle}>{t.work.moreTitle}</h3>
         <ul className={styles.more}>
-          {openSourceProjects.map((project) => (
+          {t.openSourceProjects.map((project) => (
             <li key={project.id}>
               <h4>{project.title}</h4>
               <p>{project.blurb}</p>
               <ExternalLink
                 href={project.href}
                 className="text-link"
-                label={project.title + ': View source'}
+                label={t.a11y.openSourceLink(project.title)}
               >
-                View source
+                {t.work.viewSource}
                 <Arrow />
               </ExternalLink>
             </li>

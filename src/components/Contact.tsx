@@ -1,7 +1,12 @@
 import styles from './Contact.module.css'
 import { profile } from '../content/profile'
 import { ExternalLink } from './ExternalLink'
+import { useLocale } from '../i18n/useLocale'
+
 export function Contact() {
+  const { t } = useLocale()
+  const noteLines = t.contact.note.split('\n')
+
   return (
     <section
       id="contact"
@@ -11,20 +16,23 @@ export function Contact() {
       <div className={['shell', styles.layout].join(' ')}>
         <div>
           <h2 id="contact-title" className={styles.title}>
-            Let’s build something reliable.
+            {t.contact.title}
           </h2>
           <p className={styles.note}>
-            Open to iOS, Flutter and mobile engineering opportunities.
-            <br />
-            Remote from Türkiye, or hybrid and onsite in Istanbul.
+            {noteLines.map((line, index) => (
+              <span key={line}>
+                {index > 0 ? <br /> : null}
+                {line}
+              </span>
+            ))}
           </p>
           <div className={styles.actions}>
             <a
               className={['btn', styles.emailButton].join(' ')}
               href={'mailto:' + profile.email}
-              aria-label={`Email ${profile.name}`}
+              aria-label={t.a11y.emailName(profile.name)}
             >
-              Email me
+              {t.contact.emailMe}
             </a>
             <ExternalLink href={profile.links.linkedin} label="LinkedIn">
               LinkedIn
@@ -37,10 +45,7 @@ export function Contact() {
             {profile.email}
           </a>
         </div>
-        <p className={styles.invitation}>
-          For hiring conversations, tell me about the product, team and the
-          role.
-        </p>
+        <p className={styles.invitation}>{t.contact.invitation}</p>
       </div>
     </section>
   )

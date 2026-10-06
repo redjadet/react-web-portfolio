@@ -5,12 +5,15 @@ import { Skills } from './components/Skills'
 import { About } from './components/About'
 import { Contact } from './components/Contact'
 import { Footer } from './components/Footer'
+import { useLocale } from './i18n/useLocale'
 
 export default function App() {
+  const { t } = useLocale()
+
   return (
     <>
       <a className="skip-link" href="#main">
-        Skip to content
+        {t.a11y.skipToContent}
       </a>
       <div id="top">
         <Header />

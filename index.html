@@ -37,6 +37,21 @@
         } catch (e) {}
       })()
     </script>
+    <script>
+      ;(function () {
+        try {
+          var key = 'locale'
+          var stored = localStorage.getItem(key)
+          var locale =
+            stored === 'en' || stored === 'tr'
+              ? stored
+              : (navigator.language || '').toLowerCase().indexOf('tr') === 0
+                ? 'tr'
+                : 'en'
+          document.documentElement.lang = locale
+        } catch (e) {}
+      })()
+    </script>
     <meta name="robots" content="index, follow" />
     <link rel="me" href="https://github.com/redjadet" />
     <link rel="me" href="https://www.linkedin.com/in/ilker-sevim-95020820/" />

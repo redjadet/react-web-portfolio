@@ -1,0 +1,62 @@
+.switcher {
+  display: inline-flex;
+  align-items: stretch;
+  flex-shrink: 0;
+  border: 1px solid var(--line);
+  border-radius: var(--radius);
+  background: var(--surface);
+  overflow: hidden;
+}
+
+.switcher button {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  min-width: 40px;
+  min-height: 44px;
+  margin: 0;
+  padding: 0 0.55rem;
+  border: 0;
+  border-radius: 0;
+  background: transparent;
+  color: var(--muted);
+  font: 700 0.75rem/1 var(--font-body);
+  letter-spacing: 0.04em;
+  cursor: pointer;
+  transition:
+    background var(--duration) var(--ease),
+    color var(--duration) var(--ease),
+    opacity var(--duration-fast) var(--ease);
+}
+
+.switcher button + button {
+  border-left: 1px solid var(--line);
+}
+
+.switcher button:hover {
+  background: var(--accent-soft);
+  color: var(--accent);
+}
+
+.switcher button:active {
+  opacity: 0.85;
+}
+
+.switcher button:focus-visible {
+  outline: 3px solid var(--accent);
+  outline-offset: -3px;
+  z-index: 1;
+}
+
+.switcher button.active {
+  background: var(--accent-soft);
+  color: var(--accent);
+}
+
+@media (max-width: 550px) {
+  .switcher button {
+    min-width: 36px;
+    padding: 0 0.45rem;
+    font-size: 0.7rem;
+  }
+}

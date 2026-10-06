@@ -1,6 +1,10 @@
 import styles from './Hero.module.css'
 import { profile } from '../content/profile'
+import { useLocale } from '../i18n/useLocale'
+
 export function Hero() {
+  const { t } = useLocale()
+
   return (
     <section className={styles.hero} aria-labelledby="hero-name">
       <div className={['shell', styles.inner].join(' ')}>
@@ -8,22 +12,22 @@ export function Hero() {
           <h1 id="hero-name" className={styles.name}>
             {profile.name}
           </h1>
-          <p className={styles.role}>{profile.role}</p>
-          <p className={styles.headline}>{profile.headline}</p>
-          <p className={styles.support}>{profile.support}</p>
+          <p className={styles.role}>{t.profile.role}</p>
+          <p className={styles.headline}>{t.profile.headline}</p>
+          <p className={styles.support}>{t.profile.support}</p>
           <div className={styles.actions}>
             <a className="btn btn--primary" href="#work">
-              Explore my work
+              {t.hero.exploreWork}
             </a>
             <a className="btn btn--outline" href="#contact">
-              Get in touch
+              {t.hero.getInTouch}
             </a>
           </div>
         </div>
         <img
           className={styles.portrait}
           src={import.meta.env.BASE_URL + 'ilker-sevim.jpg'}
-          alt="Portrait of İlker Sevim"
+          alt={t.hero.portraitAlt}
           width="720"
           height="959"
           fetchPriority="high"

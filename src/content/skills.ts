@@ -1,5 +1,6 @@
 export type SkillGroup = { id: string; title: string; items: string[] }
-export const skillGroups: SkillGroup[] = [
+
+export const skillGroupsEn: SkillGroup[] = [
   {
     id: 'native',
     title: 'Native iOS & iPadOS',
@@ -55,3 +56,63 @@ export const skillGroups: SkillGroup[] = [
     ],
   },
 ]
+
+export const skillGroupsTr: SkillGroup[] = [
+  {
+    id: 'native',
+    title: 'Native iOS ve iPadOS',
+    items: [
+      'Swift · SwiftUI · UIKit',
+      'Objective-C · Swift Concurrency',
+      'Xcode · CocoaPods',
+    ],
+  },
+  {
+    id: 'flutter',
+    title: 'Flutter ve Dart',
+    items: [
+      'BLoC / Cubit · Clean Architecture',
+      'Duyarlı ve uyarlanabilir arayüz',
+      'Swift / Kotlin platform entegrasyonu',
+    ],
+  },
+  {
+    id: 'architecture',
+    title: 'Mimari ve veri',
+    items: [
+      'Modüler özellikler · Bağımlılık enjeksiyonu',
+      'REST API’ler · Çevrimdışı önbellekleme',
+      'Firebase · Supabase',
+    ],
+  },
+  {
+    id: 'quality',
+    title: 'Kalite ve teslimat',
+    items: [
+      'Birim · UI · Widget · Entegrasyon testleri',
+      'GitHub Actions · Fastlane',
+      'App Store ve Google Play iş akışları',
+    ],
+  },
+  {
+    id: 'web',
+    title: 'React web',
+    items: [
+      'React · TypeScript · Vite',
+      'HTML / CSS · CSS Modules',
+      'Duyarlı ve erişilebilir arayüz',
+    ],
+  },
+  {
+    id: 'ai',
+    title: 'Yapay zekâ destekli geliştirme',
+    items: [
+      'Cursor · Codex · Yeniden kullanılabilir AI becerileri',
+      'Sınırlı değişiklikler ve mimari inceleme',
+      'İnsan kod incelemesi ve test doğrulaması',
+    ],
+  },
+]
+
+/** @deprecated Prefer locale-aware copies via `useLocale().t.skillGroups`. */
+export const skillGroups = skillGroupsEn

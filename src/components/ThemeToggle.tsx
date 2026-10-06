@@ -1,4 +1,5 @@
 import { useTheme } from '../theme/useTheme'
+import { useLocale } from '../i18n/useLocale'
 import styles from './ThemeToggle.module.css'
 
 function SunIcon() {
@@ -40,21 +41,22 @@ function MoonIcon() {
 
 export function ThemeToggle() {
   const { theme, toggleTheme } = useTheme()
+  const { t } = useLocale()
   const isDark = theme === 'dark'
+  const switchLabel = isDark ? t.theme.switchToLight : t.theme.switchToDark
+  const stateLabel = isDark ? t.theme.darkOn : t.theme.lightOn
 
   return (
     <button
       type="button"
       className={styles.toggle}
       onClick={toggleTheme}
-      aria-label={isDark ? 'Switch to light theme' : 'Switch to dark theme'}
+      aria-label={switchLabel}
       aria-pressed={isDark}
-      title={isDark ? 'Switch to light theme' : 'Switch to dark theme'}
+      title={switchLabel}
     >
       {isDark ? <SunIcon /> : <MoonIcon />}
-      <span className="visually-hidden">
-        {isDark ? 'Dark theme on' : 'Light theme on'}
-      </span>
+      <span className="visually-hidden">{stateLabel}</span>
     </button>
   )
 }

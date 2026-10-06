@@ -1,18 +1,18 @@
 import styles from './Skills.module.css'
-import { skillGroups } from '../content/skills'
+import { useLocale } from '../i18n/useLocale'
+
 export function Skills() {
+  const { t } = useLocale()
+
   return (
     <section id="skills" className="section" aria-labelledby="skills-title">
       <div className="shell">
         <h2 id="skills-title" className="section__title">
-          Skills &amp; engineering practices
+          {t.skills.title}
         </h2>
-        <p className="section__lead">
-          Native mobile depth, cross-platform delivery and a practical web
-          stack.
-        </p>
+        <p className="section__lead">{t.skills.lead}</p>
         <div className={styles.grid}>
-          {skillGroups.map((group) => (
+          {t.skillGroups.map((group) => (
             <article key={group.id} className={styles.group}>
               <h3>{group.title}</h3>
               <ul>
