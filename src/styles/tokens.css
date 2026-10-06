@@ -18,6 +18,7 @@
 }
 html {
   scroll-behavior: smooth;
+  overflow-x: clip;
 }
 body {
   margin: 0;
@@ -26,9 +27,12 @@ body {
   color: var(--ink);
   background: #fff;
   -webkit-font-smoothing: antialiased;
+  overflow-x: clip;
+  overflow-wrap: break-word;
 }
 img {
   max-width: 100%;
+  height: auto;
   display: block;
 }
 a {
@@ -39,21 +43,25 @@ a {
   outline-offset: 5px;
 }
 .shell {
-  width: min(100% - 3rem, var(--max));
+  --shell-gutter: max(1.5rem, env(safe-area-inset-left, 0px), env(safe-area-inset-right, 0px));
+  width: min(100% - (2 * var(--shell-gutter)), var(--max));
   margin-inline: auto;
 }
 .section {
   padding: 6rem 0;
-  scroll-margin-top: calc(var(--header-h) + 1rem);
+  scroll-margin-top: calc(
+    var(--header-h) + env(safe-area-inset-top, 0px) + 1rem
+  );
 }
 #top,
 #main {
-  scroll-margin-top: var(--header-h);
+  scroll-margin-top: calc(var(--header-h) + env(safe-area-inset-top, 0px));
 }
 .section__title {
   margin: 0 0 1rem;
-  font: 700 clamp(2rem, 3.4vw, 2.75rem)/1.15 var(--font-display);
+  font: 700 clamp(1.75rem, 3.4vw + 0.85rem, 2.75rem)/1.15 var(--font-display);
   letter-spacing: -0.035em;
+  text-wrap: balance;
 }
 .section__lead {
   margin: 0 0 1.7rem;
@@ -137,7 +145,7 @@ a {
     font-size: 1rem;
   }
   .shell {
-    width: min(100% - 2.5rem, var(--max));
+    --shell-gutter: max(1.25rem, env(safe-area-inset-left, 0px), env(safe-area-inset-right, 0px));
   }
   body {
     font-size: 1rem;

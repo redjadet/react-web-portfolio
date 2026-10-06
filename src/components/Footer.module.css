@@ -1,5 +1,5 @@
 .footer {
-  padding: 1.7rem 0;
+  padding: 1.7rem 0 calc(1.7rem + env(safe-area-inset-bottom, 0px));
 }
 .inner {
   display: flex;

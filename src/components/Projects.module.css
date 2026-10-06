@@ -21,6 +21,8 @@
   line-height: 1.3;
   letter-spacing: -0.025em;
   margin: 0 0 0.8rem;
+  text-wrap: balance;
+  overflow-wrap: anywhere;
 }
 .description {
   color: var(--muted);
@@ -101,6 +103,9 @@
   .more {
     grid-template-columns: 1fr;
   }
+  .more li {
+    padding-right: 0;
+  }
   .more li:nth-child(even) {
     border-left: 0;
     padding-left: 0;
@@ -110,5 +115,21 @@
   }
   .more li:last-child {
     border-bottom: 0;
+  }
+  .more h4 {
+    overflow-wrap: anywhere;
+  }
+}
+@media (max-width: 400px) {
+  .project {
+    grid-template-columns: 1fr;
+    gap: 0.55rem;
+  }
+  .index {
+    padding-top: 0;
+    font-size: 0.8125rem;
+  }
+  .evidence {
+    grid-column: 1;
   }
 }

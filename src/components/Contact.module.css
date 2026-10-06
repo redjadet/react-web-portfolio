@@ -10,8 +10,9 @@
 }
 .title {
   margin: 0 0 1rem;
-  font: 700 clamp(2rem, 3.4vw, 3rem)/1.15 var(--font-display);
+  font: 700 clamp(1.75rem, 3.4vw + 0.85rem, 3rem)/1.15 var(--font-display);
   letter-spacing: -0.04em;
+  text-wrap: balance;
 }
 .note {
   margin: 0 0 1.5rem;
@@ -68,5 +69,21 @@
     border-left: 0;
     border-top: 1px solid #51717e;
     padding: 1.5rem 0 0;
+  }
+}
+@media (max-width: 400px) {
+  .note {
+    font-size: 1rem;
+  }
+  .actions {
+    flex-direction: column;
+    align-items: stretch;
+    gap: 0.75rem;
+  }
+  .actions > a:not(.emailButton) {
+    justify-content: flex-start;
+  }
+  .emailButton {
+    width: 100%;
   }
 }

@@ -2,7 +2,7 @@
   position: sticky;
   top: 0;
   z-index: 20;
-  min-height: var(--header-h);
+  padding-top: env(safe-area-inset-top, 0px);
   background: #fff;
   border-bottom: 1px solid var(--line);
 }
@@ -62,14 +62,15 @@
     justify-content: center;
   }
   .nav {
-    gap: 1.4rem;
+    gap: 0.35rem 1rem;
     justify-content: center;
   }
   .nav a {
-    padding: 0.45rem 0;
+    padding: 0.45rem 0.15rem;
     font-size: 0.875rem;
   }
+  /* Measured stacked header content ≈ 110px / 6.875rem. */
   :global(:root) {
-    --header-h: 6.1rem;
+    --header-h: 6.875rem;
   }
 }
