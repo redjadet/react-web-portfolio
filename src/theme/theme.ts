@@ -34,7 +34,7 @@ export function applyTheme(theme: Theme): void {
   if (themeColor) {
     themeColor.setAttribute(
       'content',
-      theme === 'dark' ? '#0b181e' : '#102f3b',
+      theme === 'dark' ? '#0c1a20' : '#ffffff',
     )
   }
 }
