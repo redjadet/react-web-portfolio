@@ -14,6 +14,29 @@
     />
     <meta name="author" content="İlker Sevim" />
     <meta name="theme-color" content="#102f3b" />
+    <script>
+      ;(function () {
+        try {
+          var key = 'theme'
+          var stored = localStorage.getItem(key)
+          var theme =
+            stored === 'light' || stored === 'dark'
+              ? stored
+              : window.matchMedia('(prefers-color-scheme: dark)').matches
+                ? 'dark'
+                : 'light'
+          document.documentElement.setAttribute('data-theme', theme)
+          document.documentElement.style.colorScheme = theme
+          var meta = document.querySelector('meta[name="theme-color"]')
+          if (meta) {
+            meta.setAttribute(
+              'content',
+              theme === 'dark' ? '#0b181e' : '#102f3b',
+            )
+          }
+        } catch (e) {}
+      })()
+    </script>
     <meta name="robots" content="index, follow" />
     <link rel="me" href="https://github.com/redjadet" />
     <link rel="me" href="https://www.linkedin.com/in/ilker-sevim-95020820/" />

@@ -1,16 +1,48 @@
-:root {
+:root,
+[data-theme='light'] {
   --ink: #102f3b;
   --muted: #48616b;
   --surface: #f3f7f8;
+  --bg: #ffffff;
   --line: #cddce0;
   --accent: #0b766c;
   --accent-hover: #075e57;
+  --accent-soft: #e6f1ef;
+  --panel: #102f3b;
+  --panel-ink: #ffffff;
+  --panel-muted: #d4e4e9;
+  --panel-line: #51717e;
+  --panel-button-bg: #ffffff;
+  --panel-button-hover: #e5f3f0;
+  --panel-button-ink: #102f3b;
+  --panel-focus: #ffffff;
   --max: 70rem;
   --font-display: 'Syne', 'Avenir Next', 'Segoe UI', sans-serif;
   --font-body: 'Manrope', 'Avenir Next', 'Segoe UI', sans-serif;
   --header-h: 4.25rem;
   color-scheme: light;
 }
+
+[data-theme='dark'] {
+  --ink: #e4eef1;
+  --muted: #9aafb7;
+  --surface: #12262e;
+  --bg: #0b181e;
+  --line: #2a424c;
+  --accent: #3cb8ab;
+  --accent-hover: #5dcec2;
+  --accent-soft: #16353a;
+  --panel: #16333c;
+  --panel-ink: #e8f2f4;
+  --panel-muted: #b4c8cf;
+  --panel-line: #3a5560;
+  --panel-button-bg: #e8f2f4;
+  --panel-button-hover: #c5dde3;
+  --panel-button-ink: #102f3b;
+  --panel-focus: #e8f2f4;
+  color-scheme: dark;
+}
+
 *,
 *::before,
 *::after {
@@ -25,7 +57,7 @@ body {
   min-width: 320px;
   font: 400 1.0625rem/1.65 var(--font-body);
   color: var(--ink);
-  background: #fff;
+  background: var(--bg);
   -webkit-font-smoothing: antialiased;
   overflow-x: clip;
   overflow-wrap: break-word;
@@ -96,7 +128,7 @@ a {
   background: transparent;
 }
 .btn--outline:hover {
-  background: #e6f1ef;
+  background: var(--accent-soft);
 }
 .text-link {
   display: inline-flex;
@@ -120,7 +152,7 @@ a {
   z-index: 100;
   padding: 0.75rem 1rem;
   background: var(--ink);
-  color: white;
+  color: var(--bg);
   text-decoration: none;
 }
 .skip-link:focus-visible {

@@ -1,6 +1,7 @@
 import styles from './Header.module.css'
 import { profile } from '../content/profile'
 import { useActiveSection, type SectionId } from '../hooks/useActiveSection'
+import { ThemeToggle } from './ThemeToggle'
 
 const links: { href: `#${SectionId}`; label: string; id: SectionId }[] = [
   { href: '#work', label: 'Work', id: 'work' },
@@ -18,18 +19,21 @@ export function Header() {
         <a className={styles.brand} href="#top">
           {profile.name}
         </a>
-        <nav className={styles.nav} aria-label="Primary">
-          {links.map((link) => (
-            <a
-              key={link.href}
-              href={link.href}
-              className={activeSection === link.id ? styles.active : undefined}
-              aria-current={activeSection === link.id ? 'location' : undefined}
-            >
-              {link.label}
-            </a>
-          ))}
-        </nav>
+        <div className={styles.controls}>
+          <nav className={styles.nav} aria-label="Primary">
+            {links.map((link) => (
+              <a
+                key={link.href}
+                href={link.href}
+                className={activeSection === link.id ? styles.active : undefined}
+                aria-current={activeSection === link.id ? 'location' : undefined}
+              >
+                {link.label}
+              </a>
+            ))}
+          </nav>
+          <ThemeToggle />
+        </div>
       </div>
     </header>
   )
