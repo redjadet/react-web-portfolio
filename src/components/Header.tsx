@@ -1,3 +1,4 @@
+import { useLayoutEffect, useRef } from 'react'
 import styles from './Header.module.css'
 import { profile } from '../content/profile'
 import { useActiveSection, type SectionId } from '../hooks/useActiveSection'
@@ -6,8 +7,36 @@ import { LanguageSwitcher } from './LanguageSwitcher'
 import { ThemeToggle } from './ThemeToggle'
 
 export function Header() {
+  const headerRef = useRef<HTMLElement>(null)
   const activeSection = useActiveSection()
   const { t } = useLocale()
+
+  // Navigation wraps by viewport and locale, so anchor offsets need actual height.
+  useLayoutEffect(() => {
+    const header = headerRef.current
+    if (!header) return
+
+    const updateHeaderOffset = () => {
+      const height = Math.ceil(header.getBoundingClientRect().height)
+      document.documentElement.style.setProperty(
+        '--header-offset',
+        `${height}px`,
+      )
+    }
+
+    updateHeaderOffset()
+
+    const observer =
+      typeof ResizeObserver === 'undefined'
+        ? null
+        : new ResizeObserver(updateHeaderOffset)
+    observer?.observe(header)
+
+    return () => {
+      observer?.disconnect()
+      document.documentElement.style.removeProperty('--header-offset')
+    }
+  }, [])
 
   const links: { href: `#${SectionId}`; label: string; id: SectionId }[] = [
     { href: '#work', label: t.nav.work, id: 'work' },
@@ -17,7 +46,7 @@ export function Header() {
   ]
 
   return (
-    <header className={styles.header}>
+    <header ref={headerRef} className={styles.header}>
       <div className={`shell ${styles.inner}`}>
         <a
           className={styles.brand}
