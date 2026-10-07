@@ -19,6 +19,7 @@
   /* Layout */
   --max: 70rem;
   --header-h: 4.25rem;
+  --header-offset: calc(var(--header-h) + env(safe-area-inset-top, 0px));
   --radius: 8px;
 
   /* Spacing scale */
@@ -122,13 +123,11 @@ a {
 }
 .section {
   padding: var(--space-9) 0;
-  scroll-margin-top: calc(
-    var(--header-h) + env(safe-area-inset-top, 0px) + var(--space-4)
-  );
+  scroll-margin-top: calc(var(--header-offset) + var(--space-4));
 }
 #top,
 #main {
-  scroll-margin-top: calc(var(--header-h) + env(safe-area-inset-top, 0px));
+  scroll-margin-top: var(--header-offset);
 }
 .section__title {
   margin: 0 0 var(--space-4);

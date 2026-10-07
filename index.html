@@ -43,7 +43,9 @@
           var allowed = { en: 1, tr: 1, fr: 1, es: 1, ar: 1, ja: 1 }
           var key = 'locale'
           var stored = localStorage.getItem(key)
-          var locale = allowed[stored] ? stored : null
+          var locale = Object.prototype.hasOwnProperty.call(allowed, stored)
+            ? stored
+            : null
           if (!locale) {
             var languages =
               navigator.languages && navigator.languages.length
