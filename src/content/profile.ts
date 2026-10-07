@@ -78,3 +78,15 @@ export const profileCopyJa: ProfileCopy = {
   arrangements: 'トルコからリモート、またはイスタンブールでハイブリッド／出社',
   availability: '即応可能 · フルタイムおよび契約',
 }
+
+export const profileCopyEs: ProfileCopy = {
+  role: 'Ingeniero sénior de iOS y Flutter',
+  headline:
+    'Diseño experiencias móviles fiables en iOS, iPadOS y Flutter.',
+  support:
+    'Los repositorios públicos destacan la arquitectura, los datos sin conexión, los puentes nativos y la cobertura de pruebas — estructurados para una revisión técnica rápida.',
+  location: 'Estambul, Türkiye · UTC+3',
+  locationShort: 'Estambul, Türkiye',
+  arrangements: 'Remoto desde Türkiye; híbrido o presencial en Estambul',
+  availability: 'Disponible de inmediato · Jornada completa y contrato',
+}

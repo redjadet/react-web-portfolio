@@ -4,11 +4,13 @@ import type { SkillGroup } from '../content/skills'
 import {
   openSourceProjectsAr,
   openSourceProjectsEn,
+  openSourceProjectsEs,
   openSourceProjectsFr,
   openSourceProjectsJa,
   openSourceProjectsTr,
   projectsAr,
   projectsEn,
+  projectsEs,
   projectsFr,
   projectsJa,
   projectsTr,
@@ -17,6 +19,7 @@ import {
 import {
   skillGroupsAr,
   skillGroupsEn,
+  skillGroupsEs,
   skillGroupsFr,
   skillGroupsJa,
   skillGroupsTr,
@@ -24,6 +27,7 @@ import {
 import {
   profileCopyAr,
   profileCopyEn,
+  profileCopyEs,
   profileCopyFr,
   profileCopyJa,
   profileCopyTr,
@@ -467,10 +471,85 @@ const ja: Messages = {
   skillGroups: skillGroupsJa,
 }
 
+const es: Messages = {
+  meta: {
+    title: 'İlker Sevim — Ingeniero sénior de iOS y Flutter',
+    description:
+      'İlker Sevim — Ingeniero sénior de iOS y Flutter en Estambul. Explore proyectos móviles, prácticas de ingeniería y disponibilidad inmediata para roles remotos, a jornada completa y por contrato.',
+    ogLocale: 'es_ES',
+  },
+  a11y: {
+    skipToContent: 'Saltar al contenido',
+    primaryNav: 'Navegación principal',
+    brandTop: '— inicio de página',
+    language: 'Idioma',
+    opensInNewTab: ' (se abre en una pestaña nueva)',
+    emailName: (name) => `Enviar correo a ${name}`,
+    projectLink: (project, label) => `${project}: ${label}`,
+    openSourceLink: (project) => `${project}: Ver el código fuente`,
+  },
+  theme: {
+    switchToLight: 'Cambiar al tema claro',
+    switchToDark: 'Cambiar al tema oscuro',
+    darkOn: 'Tema oscuro activado',
+    lightOn: 'Tema claro activado',
+  },
+  nav: {
+    work: 'Trabajos',
+    skills: 'Habilidades',
+    about: 'Acerca de',
+    contact: 'Contacto',
+  },
+  hero: {
+    exploreWork: 'Explorar mis trabajos',
+    getInTouch: 'Contactar',
+    portraitAlt: 'Retrato de İlker Sevim',
+  },
+  work: {
+    title: 'Trabajos seleccionados',
+    lead: 'Proyectos públicos que muestran cómo diseño, construyo y verifico software.',
+    moreTitle: 'Más trabajo de código abierto',
+    viewSource: 'Ver el código fuente',
+  },
+  skills: {
+    title: 'Habilidades y prácticas de ingeniería',
+    lead: 'Profundidad móvil nativa, entrega multiplataforma y un stack web práctico.',
+  },
+  about: {
+    title: 'Experiencia con restricciones reales de producto',
+    paragraphs: [
+      'Soy un ingeniero móvil sénior con base en Estambul. Mi experiencia abarca banca, pagos, telecomunicaciones y comunicaciones seguras, incluidas aplicaciones nativas de iPhone e iPad, frameworks iOS compartidos y entrega multiplataforma.',
+      'He liderado el desarrollo móvil, mentorizado a ingenieros y automatizado flujos de build y publicación. Mis proyectos públicos facilitan la revisión de decisiones de arquitectura, integración de plataforma y prácticas de pruebas.',
+      'Aporto el mismo cuidado al desarrollo asistido por IA: contexto útil, cambios acotados, revisión humana y verificación.',
+    ],
+    location: 'Ubicación',
+    arrangements: 'Modalidad de trabajo',
+    availability: 'Disponibilidad',
+    education: 'Formación',
+    educationValue:
+      'Licenciatura en Ingeniería Informática · Universidad Işık\nMBA · Universidad Maltepe',
+  },
+  contact: {
+    title: 'Construyamos algo fiable.',
+    note: 'Abierto a oportunidades de iOS, Flutter e ingeniería móvil.\nRemoto desde Türkiye, o híbrido y presencial en Estambul.',
+    emailMe: 'Enviarme un correo',
+    invitation:
+      'Para conversaciones de contratación, cuénteme sobre el producto, el equipo y el rol.',
+  },
+  footer: {
+    websiteSource: 'Código fuente del sitio',
+  },
+  profile: profileCopyEs,
+  projects: projectsEs,
+  openSourceProjects: openSourceProjectsEs,
+  skillGroups: skillGroupsEs,
+}
+
 export const messagesByLocale: Record<Locale, Messages> = {
   en,
   tr,
   fr,
+  es,
   ar,
   ja,
 }
