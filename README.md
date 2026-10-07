@@ -1,12 +1,12 @@
 # İlker Sevim — Personal Website
 
-[![Live site](https://img.shields.io/badge/site-live-0B6E4F?logo=githubpages&logoColor=white)](https://redjadet.github.io/react-web-portfolio/)
-[![Deploy GitHub Pages](https://github.com/redjadet/react-web-portfolio/actions/workflows/deploy-pages.yml/badge.svg)](https://github.com/redjadet/react-web-portfolio/actions/workflows/deploy-pages.yml)
+[![Live site](https://img.shields.io/badge/site-live-0B6E4F?logo=githubpages&logoColor=white)](https://redjadet.github.io/)
+[![Deploy GitHub Pages](https://github.com/redjadet/redjadet.github.io/actions/workflows/deploy-pages.yml/badge.svg)](https://github.com/redjadet/redjadet.github.io/actions/workflows/deploy-pages.yml)
 [![TypeScript](https://img.shields.io/badge/TypeScript-3178C6?logo=typescript&logoColor=white)](https://www.typescriptlang.org/)
 [![Vite](https://img.shields.io/badge/Vite-646CFF?logo=vite&logoColor=white)](https://vite.dev/)
 [![Node.js 24](https://img.shields.io/badge/Node.js-24-339933?logo=nodedotjs&logoColor=white)](https://nodejs.org/)
 
-Professional website for a senior iOS and Flutter engineer based in Istanbul. Live at [redjadet.github.io/react-web-portfolio](https://redjadet.github.io/react-web-portfolio/). It brings together selected public projects, engineering practices, availability and contact links. React and TypeScript are demonstrated through the website itself; the mobile apps are clearly presented as portfolio references.
+Professional website for a senior iOS and Flutter engineer based in Istanbul. Live at [redjadet.github.io](https://redjadet.github.io/). It brings together selected public projects, engineering practices, availability and contact links. React and TypeScript are demonstrated through the website itself; the mobile apps are clearly presented as portfolio references.
 
 ![Portfolio preview — hero and selected work sections](public/og.png)
 
@@ -29,7 +29,7 @@ Contact: [ilkersevim2007@gmail.com](mailto:ilkersevim2007@gmail.com) · [LinkedI
 - Semantic headings, skip navigation, descriptive external links, visible keyboard focus and reduced-motion support.
 - Portrait dimensions reserve space; no analytics, tracking scripts or pretend contact form.
 - Canonical URL, robots/sitemap, Person structured data and Open Graph metadata.
-- GitHub Pages deployment with frozen dependency installation, lint and TypeScript/build checks.
+- GitHub Pages user-site deployment (`redjadet.github.io`) with frozen dependency installation, lint and TypeScript/build checks.
 
 ## Local development
 
@@ -40,7 +40,7 @@ pnpm install --frozen-lockfile
 pnpm dev --host 127.0.0.1 --port 43123
 ```
 
-Open http://127.0.0.1:43123/react-web-portfolio/
+Open http://127.0.0.1:43123/
 
 ```bash
 pnpm lint
@@ -50,11 +50,13 @@ pnpm preview
 
 ## Update content
 
-Edit `src/content/profile.ts`, `projects.ts` and `skills.ts`. Put static assets in `public/`; reference them through `import.meta.env.BASE_URL` to preserve the GitHub Pages project path.
+Edit `src/content/profile.ts`, `projects.ts` and `skills.ts`. Put static assets in `public/`; reference them through `import.meta.env.BASE_URL` so asset paths stay correct for the user-site root (`base: '/'`).
 
 ## Deploy
 
-Pushes to `main` run `.github/workflows/deploy-pages.yml`. GitHub Pages uses the GitHub Actions source and Vite's `/react-web-portfolio/` base path.
+Live site source of truth for Pages is [`redjadet/redjadet.github.io`](https://github.com/redjadet/redjadet.github.io) (user site at `/`). Pushes to `main` there run `.github/workflows/deploy-pages.yml`. This repository (`react-web-portfolio`) remains the working clone and mirrors the same codebase; CI still lints and builds, but Pages deploy runs only from the `*.github.io` repo.
+
+Preferred personal URL `https://ilkersevim.github.io/` requires claiming the `ilkersevim` GitHub username or organization (not done here — see project notes).
 
 ## Manual review
 

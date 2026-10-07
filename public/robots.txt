@@ -1,4 +1,4 @@
 User-agent: *
 Allow: /
 
-Sitemap: https://redjadet.github.io/react-web-portfolio/sitemap.xml
+Sitemap: https://redjadet.github.io/sitemap.xml
