@@ -54,7 +54,7 @@ Edit `src/content/profile.ts`, `projects.ts` and `skills.ts`. Put static assets 
 
 ## Deploy
 
-Live site source of truth for Pages is [`redjadet/redjadet.github.io`](https://github.com/redjadet/redjadet.github.io) (user site at `/`). Pushes to `main` there run `.github/workflows/deploy-pages.yml`. This repository (`react-web-portfolio`) remains the working clone and mirrors the same codebase; CI still lints and builds, but Pages deploy runs only from the `*.github.io` repo.
+Live site source of truth for Pages is [`redjadet/redjadet.github.io`](https://github.com/redjadet/redjadet.github.io) (user site at `/`). Pushes to `main` there run `.github/workflows/deploy-pages.yml` and publish the app. This repository (`react-web-portfolio`) remains the working clone and mirrors the same codebase; its project Pages site publishes only a static redirect from `/react-web-portfolio/` to `https://redjadet.github.io/` (`redirect-pages/`).
 
 Preferred personal URL `https://ilkersevim.github.io/` requires claiming the `ilkersevim` GitHub username or organization (not done here — see project notes).
 
