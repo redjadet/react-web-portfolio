@@ -42,3 +42,39 @@ export const profileCopyTr: ProfileCopy = {
   arrangements: 'Türkiye’den uzaktan; İstanbul’da hibrit veya ofis içi',
   availability: 'Hemen · Tam zamanlı ve sözleşmeli',
 }
+
+export const profileCopyFr: ProfileCopy = {
+  role: 'Ingénieur iOS & Flutter senior',
+  headline:
+    'Je conçois des expériences mobiles fiables sur iOS, iPadOS et Flutter.',
+  support:
+    'Les dépôts publics mettent en avant l’architecture, les données hors ligne, les ponts natifs et la couverture de tests — structurés pour une revue technique rapide.',
+  location: 'Istanbul, Türkiye · UTC+3',
+  locationShort: 'Istanbul, Türkiye',
+  arrangements: 'Télétravail depuis la Türkiye ; hybride ou sur site à Istanbul',
+  availability: 'Disponible immédiatement · CDI et contrat',
+}
+
+export const profileCopyAr: ProfileCopy = {
+  role: 'مهندس iOS وFlutter أول',
+  headline:
+    'أبني تجارب جوال موثوقة عبر iOS وiPadOS وFlutter.',
+  support:
+    'تُبرز المستودعات العامة البنية المعمارية والبيانات دون اتصال والجسور الأصلية وتغطية الاختبارات — مُنظَّمة لمراجعة تقنية سريعة.',
+  location: 'إسطنبول، تركيا · UTC+3',
+  locationShort: 'إسطنبول، تركيا',
+  arrangements: 'عن بُعد من تركيا؛ هجين أو حضوري في إسطنبول',
+  availability: 'متاح فورًا · دوام كامل وعقود',
+}
+
+export const profileCopyJa: ProfileCopy = {
+  role: 'シニア iOS / Flutter エンジニア',
+  headline:
+    'iOS・iPadOS・Flutter で信頼性の高いモバイル体験を構築しています。',
+  support:
+    '公開リポジトリではアーキテクチャ、オフラインデータ、ネイティブブリッジ、テストカバレッジを明示しており、技術レビューしやすい構成です。',
+  location: 'トルコ・イスタンブール · UTC+3',
+  locationShort: 'トルコ・イスタンブール',
+  arrangements: 'トルコからリモート、またはイスタンブールでハイブリッド／出社',
+  availability: '即応可能 · フルタイムおよび契約',
+}

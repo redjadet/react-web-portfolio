@@ -3,12 +3,13 @@
   grid-template-columns: repeat(2, minmax(0, 1fr));
 }
 .group {
-  padding: 1.65rem var(--space-6) 1.65rem 0;
+  padding-block: 1.65rem;
+  padding-inline: 0 var(--space-6);
   border-bottom: 1px solid var(--line);
 }
 .group:nth-child(even) {
-  padding-left: var(--space-6);
-  border-left: 1px solid var(--line);
+  padding-inline-start: var(--space-6);
+  border-inline-start: 1px solid var(--line);
 }
 .group:nth-last-child(-n + 2) {
   border-bottom: 0;
@@ -33,8 +34,8 @@
     grid-template-columns: 1fr;
   }
   .group:nth-child(even) {
-    padding-left: 0;
-    border-left: 0;
+    padding-inline-start: 0;
+    border-inline-start: 0;
   }
   .group:nth-last-child(-n + 2) {
     border-bottom: 1px solid var(--line);

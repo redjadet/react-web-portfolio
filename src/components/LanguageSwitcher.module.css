@@ -12,16 +12,16 @@
   display: inline-flex;
   align-items: center;
   justify-content: center;
-  min-width: 40px;
+  min-width: 2.15rem;
   min-height: 44px;
   margin: 0;
-  padding: 0 0.55rem;
+  padding: 0 0.4rem;
   border: 0;
   border-radius: 0;
   background: transparent;
   color: var(--muted);
-  font: 700 0.75rem/1 var(--font-body);
-  letter-spacing: 0.04em;
+  font: 700 0.7rem/1 var(--font-body);
+  letter-spacing: 0.03em;
   cursor: pointer;
   transition:
     background var(--duration) var(--ease),
@@ -30,7 +30,7 @@
 }
 
 .switcher button + button {
-  border-left: 1px solid var(--line);
+  border-inline-start: 1px solid var(--line);
 }
 
 .switcher button:hover {
@@ -54,9 +54,13 @@
 }
 
 @media (max-width: 550px) {
+  .switcher {
+    max-width: 100%;
+  }
+
   .switcher button {
-    min-width: 36px;
-    padding: 0 0.45rem;
-    font-size: 0.7rem;
+    min-width: 1.9rem;
+    padding: 0 0.28rem;
+    font-size: 0.65rem;
   }
 }

@@ -2,14 +2,33 @@ import type { Locale } from './locale'
 import type { Project } from '../content/projects'
 import type { SkillGroup } from '../content/skills'
 import {
+  openSourceProjectsAr,
   openSourceProjectsEn,
+  openSourceProjectsFr,
+  openSourceProjectsJa,
   openSourceProjectsTr,
+  projectsAr,
   projectsEn,
+  projectsFr,
+  projectsJa,
   projectsTr,
   type OpenSourceProject,
 } from '../content/projects'
-import { skillGroupsEn, skillGroupsTr } from '../content/skills'
-import { profileCopyEn, profileCopyTr, type ProfileCopy } from '../content/profile'
+import {
+  skillGroupsAr,
+  skillGroupsEn,
+  skillGroupsFr,
+  skillGroupsJa,
+  skillGroupsTr,
+} from '../content/skills'
+import {
+  profileCopyAr,
+  profileCopyEn,
+  profileCopyFr,
+  profileCopyJa,
+  profileCopyTr,
+  type ProfileCopy,
+} from '../content/profile'
 
 export type Messages = {
   meta: {
@@ -226,9 +245,234 @@ const tr: Messages = {
   skillGroups: skillGroupsTr,
 }
 
+const fr: Messages = {
+  meta: {
+    title: 'İlker Sevim — Ingénieur iOS & Flutter senior',
+    description:
+      'İlker Sevim — Ingénieur iOS & Flutter senior à Istanbul. Projets mobiles, pratiques d’ingénierie et disponibilité immédiate pour des postes à distance, en CDI ou en contrat.',
+    ogLocale: 'fr_FR',
+  },
+  a11y: {
+    skipToContent: 'Aller au contenu',
+    primaryNav: 'Navigation principale',
+    brandTop: '— haut de page',
+    language: 'Langue',
+    opensInNewTab: ' (s’ouvre dans un nouvel onglet)',
+    emailName: (name) => `Envoyer un e-mail à ${name}`,
+    projectLink: (project, label) => `${project} : ${label}`,
+    openSourceLink: (project) => `${project} : Voir le code source`,
+  },
+  theme: {
+    switchToLight: 'Passer au thème clair',
+    switchToDark: 'Passer au thème sombre',
+    darkOn: 'Thème sombre activé',
+    lightOn: 'Thème clair activé',
+  },
+  nav: {
+    work: 'Travaux',
+    skills: 'Compétences',
+    about: 'À propos',
+    contact: 'Contact',
+  },
+  hero: {
+    exploreWork: 'Découvrir mes travaux',
+    getInTouch: 'Me contacter',
+    portraitAlt: 'Portrait d’İlker Sevim',
+  },
+  work: {
+    title: 'Travaux sélectionnés',
+    lead: 'Projets publics qui montrent comment je conçois, construis et vérifie des logiciels.',
+    moreTitle: 'Autres projets open source',
+    viewSource: 'Voir le code source',
+  },
+  skills: {
+    title: 'Compétences et pratiques d’ingénierie',
+    lead: 'Profondeur mobile native, livraison multiplateforme et stack web pragmatique.',
+  },
+  about: {
+    title: 'Une expérience ancrée dans de vraies contraintes produit',
+    paragraphs: [
+      'Je suis un ingénieur mobile senior basé à Istanbul. Mon expérience couvre la banque, les paiements, les télécoms et les communications sécurisées, y compris des applications iPhone et iPad natives, des frameworks iOS partagés et la livraison multiplateforme.',
+      'J’ai dirigé le développement mobile, mentoré des ingénieurs et automatisé les workflows de build et de publication. Mes projets publics rendent les décisions d’architecture, l’intégration plateforme et les pratiques de test faciles à examiner.',
+      'J’apporte le même soin au développement assisté par l’IA : contexte utile, changements ciblés, revue humaine et vérification.',
+    ],
+    location: 'Localisation',
+    arrangements: 'Modalités de travail',
+    availability: 'Disponibilité',
+    education: 'Formation',
+    educationValue:
+      'Licence en génie informatique · Université Işık\nMBA · Université Maltepe',
+  },
+  contact: {
+    title: 'Construisons quelque chose de fiable.',
+    note: 'Ouvert aux opportunités iOS, Flutter et ingénierie mobile.\nTélétravail depuis la Türkiye, ou hybride et sur site à Istanbul.',
+    emailMe: 'M’écrire',
+    invitation:
+      'Pour les échanges de recrutement, parlez-moi du produit, de l’équipe et du rôle.',
+  },
+  footer: {
+    websiteSource: 'Code source du site',
+  },
+  profile: profileCopyFr,
+  projects: projectsFr,
+  openSourceProjects: openSourceProjectsFr,
+  skillGroups: skillGroupsFr,
+}
+
+const ar: Messages = {
+  meta: {
+    title: 'İlker Sevim — مهندس iOS وFlutter أول',
+    description:
+      'İlker Sevim — مهندس iOS وFlutter أول في إسطنبول. استكشف مشاريع الجوال وممارسات الهندسة والتوافر الفوري للأدوار عن بُعد وبدوام كامل وبالعقد.',
+    ogLocale: 'ar_SA',
+  },
+  a11y: {
+    skipToContent: 'تخطَّ إلى المحتوى',
+    primaryNav: 'التنقل الرئيسي',
+    brandTop: '— أعلى الصفحة',
+    language: 'اللغة',
+    opensInNewTab: ' (يُفتح في علامة تبويب جديدة)',
+    emailName: (name) => `إرسال بريد إلى ${name}`,
+    projectLink: (project, label) => `${project}: ${label}`,
+    openSourceLink: (project) => `${project}: عرض المصدر`,
+  },
+  theme: {
+    switchToLight: 'التبديل إلى السمة الفاتحة',
+    switchToDark: 'التبديل إلى السمة الداكنة',
+    darkOn: 'السمة الداكنة مفعّلة',
+    lightOn: 'السمة الفاتحة مفعّلة',
+  },
+  nav: {
+    work: 'الأعمال',
+    skills: 'المهارات',
+    about: 'نبذة',
+    contact: 'تواصل',
+  },
+  hero: {
+    exploreWork: 'استكشف أعمالي',
+    getInTouch: 'تواصل معي',
+    portraitAlt: 'صورة İlker Sevim',
+  },
+  work: {
+    title: 'أعمال مختارة',
+    lead: 'مشاريع عامة تُظهر كيف أصمّم البرمجيات وأبنيها وأتحقق منها.',
+    moreTitle: 'مزيد من أعمال المصدر المفتوح',
+    viewSource: 'عرض المصدر',
+  },
+  skills: {
+    title: 'المهارات وممارسات الهندسة',
+    lead: 'عمق جوال أصلي، وتسليم عبر المنصات، ومكدس ويب عملي.',
+  },
+  about: {
+    title: 'خبرة مبنية على قيود منتجات حقيقية',
+    paragraphs: [
+      'أنا مهندس جوال أول مقيم في إسطنبول. تشمل خبرتي البنوك والمدفوعات والاتصالات والاتصالات الآمنة، بما في ذلك تطبيقات iPhone وiPad الأصلية وأُطر iOS المشتركة والتسليم عبر المنصات.',
+      'قدت تطوير الجوال، ووجّهت المهندسين، وأتمتُّ سير عمل البناء والنشر. تجعل مشاريعي العامة قرارات البنية المعمارية وتكامل المنصة وممارسات الاختبار سهلة المراجعة.',
+      'أحمل العناية نفسها إلى التطوير بمساعدة الذكاء الاصطناعي: سياق مفيد، وتغييرات محدودة النطاق، ومراجعة بشرية، وتحقق.',
+    ],
+    location: 'الموقع',
+    arrangements: 'ترتيبات العمل',
+    availability: 'التوافر',
+    education: 'التعليم',
+    educationValue:
+      'بكالوريوس هندسة الحاسوب · جامعة إيشيق\nماجستير إدارة أعمال · جامعة مالتبه',
+  },
+  contact: {
+    title: 'لنبنِ شيئًا يمكن الاعتماد عليه.',
+    note: 'منفتح على فرص iOS وFlutter وهندسة الجوال.\nعن بُعد من تركيا، أو هجين وحضوري في إسطنبول.',
+    emailMe: 'راسلني',
+    invitation:
+      'لمحادثات التوظيف، أخبرني عن المنتج والفريق والدور.',
+  },
+  footer: {
+    websiteSource: 'مصدر الموقع',
+  },
+  profile: profileCopyAr,
+  projects: projectsAr,
+  openSourceProjects: openSourceProjectsAr,
+  skillGroups: skillGroupsAr,
+}
+
+const ja: Messages = {
+  meta: {
+    title: 'İlker Sevim — シニア iOS / Flutter エンジニア',
+    description:
+      'İlker Sevim — イスタンブール在住のシニア iOS / Flutter エンジニア。モバイルプロジェクト、エンジニアリング実践、リモート・フルタイム・契約での即応可能性をご覧ください。',
+    ogLocale: 'ja_JP',
+  },
+  a11y: {
+    skipToContent: 'コンテンツへスキップ',
+    primaryNav: 'メインナビゲーション',
+    brandTop: '— ページ先頭',
+    language: '言語',
+    opensInNewTab: '（新しいタブで開きます）',
+    emailName: (name) => `${name} にメール`,
+    projectLink: (project, label) => `${project}: ${label}`,
+    openSourceLink: (project) => `${project}: ソースを見る`,
+  },
+  theme: {
+    switchToLight: 'ライトテーマに切り替え',
+    switchToDark: 'ダークテーマに切り替え',
+    darkOn: 'ダークテーマオン',
+    lightOn: 'ライトテーマオン',
+  },
+  nav: {
+    work: '制作',
+    skills: 'スキル',
+    about: '経歴',
+    contact: '連絡',
+  },
+  hero: {
+    exploreWork: '制作を見る',
+    getInTouch: '連絡する',
+    portraitAlt: 'İlker Sevim のポートレート',
+  },
+  work: {
+    title: '選定作品',
+    lead: '設計・実装・検証の進め方を示す公開プロジェクト。',
+    moreTitle: 'その他のオープンソース',
+    viewSource: 'ソースを見る',
+  },
+  skills: {
+    title: 'スキルとエンジニアリング実践',
+    lead: 'ネイティブモバイルの深さ、クロスプラットフォーム配送、実用的な Web スタック。',
+  },
+  about: {
+    title: '実プロダクトの制約から得た経験',
+    paragraphs: [
+      'イスタンブールを拠点とするシニアモバイルエンジニアです。銀行・決済・通信・セキュア通信にわたり、ネイティブ iPhone / iPad アプリ、共有 iOS フレームワーク、クロスプラットフォーム配送の経験があります。',
+      'モバイル開発のリード、エンジニアのメンタリング、ビルド／リリース自動化を行ってきました。公開プロジェクトでは、アーキテクチャ判断、プラットフォーム連携、テスト実践をレビューしやすくしています。',
+      'AI 支援開発にも同じ慎重さで向き合います。有用な文脈、スコープを絞った変更、人によるレビューと検証です。',
+    ],
+    location: '所在地',
+    arrangements: '勤務形態',
+    availability: '稼働可否',
+    education: '学歴',
+    educationValue:
+      'コンピュータ工学学士 · Işık 大学\nMBA · Maltepe 大学',
+  },
+  contact: {
+    title: '信頼できるものを一緒に作りましょう。',
+    note: 'iOS・Flutter・モバイルエンジニアリングの機会に関心しています。\nトルコからのリモート、またはイスタンブールでのハイブリッド／出社。',
+    emailMe: 'メールする',
+    invitation:
+      '採用のご相談では、プロダクト・チーム・役割について教えてください。',
+  },
+  footer: {
+    websiteSource: 'サイトのソース',
+  },
+  profile: profileCopyJa,
+  projects: projectsJa,
+  openSourceProjects: openSourceProjectsJa,
+  skillGroups: skillGroupsJa,
+}
+
 export const messagesByLocale: Record<Locale, Messages> = {
   en,
   tr,
+  fr,
+  ar,
+  ja,
 }
 
 export function getMessages(locale: Locale): Messages {

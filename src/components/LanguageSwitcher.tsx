@@ -1,11 +1,11 @@
 import styles from './LanguageSwitcher.module.css'
-import { LOCALES, type Locale } from '../i18n/locale'
+import {
+  LOCALES,
+  LOCALE_LABELS,
+  LOCALE_NATIVE_NAMES,
+  type Locale,
+} from '../i18n/locale'
 import { useLocale } from '../i18n/useLocale'
-
-const labels: Record<Locale, string> = {
-  en: 'EN',
-  tr: 'TR',
-}
 
 export function LanguageSwitcher() {
   const { locale, setLocale, t } = useLocale()
@@ -16,8 +16,9 @@ export function LanguageSwitcher() {
       role="group"
       aria-label={t.a11y.language}
     >
-      {LOCALES.map((code) => {
+      {LOCALES.map((code: Locale) => {
         const selected = locale === code
+        const name = LOCALE_NATIVE_NAMES[code]
         return (
           <button
             key={code}
@@ -25,11 +26,11 @@ export function LanguageSwitcher() {
             className={selected ? styles.active : undefined}
             onClick={() => setLocale(code)}
             aria-pressed={selected}
-            aria-label={code === 'en' ? 'English' : 'Türkçe'}
+            aria-label={name}
             lang={code}
-            title={code === 'en' ? 'English' : 'Türkçe'}
+            title={name}
           >
-            {labels[code]}
+            {LOCALE_LABELS[code]}
           </button>
         )
       })}

@@ -114,5 +114,176 @@ export const skillGroupsTr: SkillGroup[] = [
   },
 ]
 
+export const skillGroupsFr: SkillGroup[] = [
+  {
+    id: 'native',
+    title: 'iOS & iPadOS natifs',
+    items: [
+      'Swift · SwiftUI · UIKit',
+      'Objective-C · Swift Concurrency',
+      'Xcode · CocoaPods',
+    ],
+  },
+  {
+    id: 'flutter',
+    title: 'Flutter & Dart',
+    items: [
+      'BLoC / Cubit · Clean Architecture',
+      'Interface responsive et adaptative',
+      'Intégration plateforme Swift / Kotlin',
+    ],
+  },
+  {
+    id: 'architecture',
+    title: 'Architecture & données',
+    items: [
+      'Fonctionnalités modulaires · Injection de dépendances',
+      'API REST · Cache hors ligne',
+      'Firebase · Supabase',
+    ],
+  },
+  {
+    id: 'quality',
+    title: 'Qualité & livraison',
+    items: [
+      'Tests unitaires · UI · Widget · Intégration',
+      'GitHub Actions · Fastlane',
+      'Processus App Store & Google Play',
+    ],
+  },
+  {
+    id: 'web',
+    title: 'Web React',
+    items: [
+      'React · TypeScript · Vite',
+      'HTML / CSS · CSS Modules',
+      'Interface responsive et accessible',
+    ],
+  },
+  {
+    id: 'ai',
+    title: 'Développement assisté par l’IA',
+    items: [
+      'Cursor · Codex · Compétences IA réutilisables',
+      'Changements ciblés et revue d’architecture',
+      'Revue humaine du code et vérification par tests',
+    ],
+  },
+]
+
+export const skillGroupsAr: SkillGroup[] = [
+  {
+    id: 'native',
+    title: 'iOS وiPadOS الأصليون',
+    items: [
+      'Swift · SwiftUI · UIKit',
+      'Objective-C · Swift Concurrency',
+      'Xcode · CocoaPods',
+    ],
+  },
+  {
+    id: 'flutter',
+    title: 'Flutter وDart',
+    items: [
+      'BLoC / Cubit · Clean Architecture',
+      'واجهة متجاوبة ومتكيّفة',
+      'تكامل منصة Swift / Kotlin',
+    ],
+  },
+  {
+    id: 'architecture',
+    title: 'البنية المعمارية والبيانات',
+    items: [
+      'ميزات معيارية · حقن التبعيات',
+      'واجهات REST · تخزين مؤقت دون اتصال',
+      'Firebase · Supabase',
+    ],
+  },
+  {
+    id: 'quality',
+    title: 'الجودة والتسليم',
+    items: [
+      'اختبارات وحدة · واجهة · ودجت · تكامل',
+      'GitHub Actions · Fastlane',
+      'سير عمل App Store وGoogle Play',
+    ],
+  },
+  {
+    id: 'web',
+    title: 'ويب React',
+    items: [
+      'React · TypeScript · Vite',
+      'HTML / CSS · CSS Modules',
+      'واجهة متجاوبة وسهلة الوصول',
+    ],
+  },
+  {
+    id: 'ai',
+    title: 'تطوير بمساعدة الذكاء الاصطناعي',
+    items: [
+      'Cursor · Codex · مهارات ذكاء اصطناعي قابلة لإعادة الاستخدام',
+      'تغييرات محدودة النطاق ومراجعة معمارية',
+      'مراجعة بشرية للرمز والتحقق بالاختبارات',
+    ],
+  },
+]
+
+export const skillGroupsJa: SkillGroup[] = [
+  {
+    id: 'native',
+    title: 'ネイティブ iOS / iPadOS',
+    items: [
+      'Swift · SwiftUI · UIKit',
+      'Objective-C · Swift Concurrency',
+      'Xcode · CocoaPods',
+    ],
+  },
+  {
+    id: 'flutter',
+    title: 'Flutter / Dart',
+    items: [
+      'BLoC / Cubit · Clean Architecture',
+      'レスポンシブ／アダプティブ UI',
+      'Swift / Kotlin プラットフォーム連携',
+    ],
+  },
+  {
+    id: 'architecture',
+    title: 'アーキテクチャとデータ',
+    items: [
+      'モジュラー機能 · DI',
+      'REST API · オフラインキャッシュ',
+      'Firebase · Supabase',
+    ],
+  },
+  {
+    id: 'quality',
+    title: '品質とデリバリー',
+    items: [
+      'ユニット · UI · Widget · 統合テスト',
+      'GitHub Actions · Fastlane',
+      'App Store / Google Play ワークフロー',
+    ],
+  },
+  {
+    id: 'web',
+    title: 'React Web',
+    items: [
+      'React · TypeScript · Vite',
+      'HTML / CSS · CSS Modules',
+      'レスポンシブでアクセシブルな UI',
+    ],
+  },
+  {
+    id: 'ai',
+    title: 'AI 支援開発',
+    items: [
+      'Cursor · Codex · 再利用可能な AI スキル',
+      'スコープを絞った変更とアーキテクチャレビュー',
+      '人によるコードレビューとテスト検証',
+    ],
+  },
+]
+
 /** @deprecated Prefer locale-aware copies via `useLocale().t.skillGroups`. */
 export const skillGroups = skillGroupsEn

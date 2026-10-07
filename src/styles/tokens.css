@@ -53,6 +53,20 @@
   color-scheme: light;
 }
 
+html[lang='ar'] {
+  --font-display: 'Noto Sans Arabic', 'Syne', 'Avenir Next', 'Segoe UI',
+    sans-serif;
+  --font-body: 'Noto Sans Arabic', 'Manrope', 'Avenir Next', 'Segoe UI',
+    sans-serif;
+}
+
+html[lang='ja'] {
+  --font-display: 'Noto Sans JP', 'Syne', 'Hiragino Sans', 'Yu Gothic',
+    sans-serif;
+  --font-body: 'Noto Sans JP', 'Manrope', 'Hiragino Sans', 'Yu Gothic',
+    sans-serif;
+}
+
 [data-theme='dark'] {
   --ink: #e6eef1;
   --muted: #9bb0b8;
@@ -193,7 +207,7 @@ a {
 }
 .skip-link {
   position: absolute;
-  left: var(--space-4);
+  inset-inline-start: var(--space-4);
   top: -100px;
   z-index: 100;
   padding: var(--space-3) var(--space-4);
